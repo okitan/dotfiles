@@ -1,2 +1,14 @@
+# for emacs
+*~
+\#*
+.\#*
+
+# for emacs.d
+.emacs.d/*/*.el
+.emacs.d/*/*.elc
+.emacs.d/init.elc
+.emacs.d/anything-c-adaptive-history
+
+# local or disalbe flag
 *.local
 *.orz
