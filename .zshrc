@@ -7,13 +7,11 @@ RPROMPT='%{$reset_color%} %~ %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue
 
 # load each zsh. each zshrc can be disabled by touching $file.orz
 load_zshrc() {
-  [[ -f $file ]] && ! [[ -e $file.orz ]] && source $file
+  [[ -f $1 ]] && ! [[ -e $1.orz ]] && source $1
 }
 
-files=`find ${0%/*}/zsh -name "*.sh"`
-for file in $files; do
-  load_zshrc $file
-done
+# I don't know how to loop with each
+eval "`find ${0%/*}/zsh -name "*.sh" | sed "s/^/load_zshrc /g"`"
 
 # local settings
 [[ -f ~/dotfiles/.zshrc.local ]] && source ~/dotfiles/.zshrc.local
