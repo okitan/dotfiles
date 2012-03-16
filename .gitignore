@@ -6,7 +6,9 @@
 # for emacs.d
 wget-log
 *.elc
-.emacs.d/*/*.el
+.emacs.d/auto-install
+.emacs.d/elisp
+.emacs.d/elpa
 .emacs.d/anything-c-adaptive-history
 
 # local or disalbe flag
