@@ -4,4 +4,6 @@
 	ci = commit
 [color]
 	ui = true
-
+[user]
+	name = okitan
+	email = okitakunio@gmail.com
