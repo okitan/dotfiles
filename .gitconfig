@@ -1,0 +1,7 @@
+[alias]
+	co = checkout
+	stat = status
+	ci = commit
+[color]
+	ui = true
+
