@@ -8,3 +8,10 @@
 ;;; paren
 (setq show-paren-delay 0)
 (show-paren-mode t)
+
+;;; space and newline
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+(setq require-final-newline t)
+
+;;; C-k
+(setq kill-whole-line t)
