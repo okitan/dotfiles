@@ -1,4 +1,3 @@
-;; package is installed by executing init.sh
 (el-get 'sync 'package)
 
 (when (require 'package nil t)
