@@ -9,6 +9,9 @@
 (setq show-paren-delay 0)
 (show-paren-mode t)
 
+;;; indent
+(setq-default indent-tabs-mode nil)
+
 ;;; space and newline
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (setq require-final-newline t)
