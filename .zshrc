@@ -5,6 +5,11 @@
 PROMPT='%{$fg_bold[red]%}➜ '
 RPROMPT='%{$reset_color%} %~ %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%}%{$reset_color%}'
 
+# HISTORY
+setopt hist_ignore_all_dups
+setopt hist_reduce_blanks
+setopt share_history
+
 # load each zsh. each zshrc can be disabled by touching $file.orz
 load_zshrc() {
   [[ -f $1 ]] && ! [[ -e $1.orz ]] && source $1
