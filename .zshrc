@@ -15,8 +15,13 @@ load_zshrc() {
   [[ -f $1 ]] && ! [[ -e $1.orz ]] && source $1
 }
 
+# source file if exist
+source_if_exist() {
+  [[ -f $1 ]] && source $1
+}
+
 # I don't know how to loop with each
 eval "`find ${0%/*}/zsh -name "*.sh" | sed "s/^/load_zshrc /g"`"
 
 # local settings
-[[ -f ~/dotfiles/.zshrc.local ]] && source ~/dotfiles/.zshrc.local
+source_if_exist ~/dotfiles/.zshrc.local
