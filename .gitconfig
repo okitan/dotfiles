@@ -1,9 +1,18 @@
 [alias]
-	co = checkout
-	stat = status
-	ci = commit
+        co = checkout
+        stat = status
+        ci = commit
 [color]
-	ui = true
+        ui = true
 [user]
-	name = okitan
-	email = okitakunio@gmail.com
+        name = okitan
+        email = okitakunio@gmail.com
+[gitflow "branch"]
+        master = master
+        develop = develop
+[gitflow "prefix"]
+        feature = feature/
+        release = release/
+        hotfix = hotfix/
+        support = support/
+        versiontag =
