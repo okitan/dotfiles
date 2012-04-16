@@ -1,7 +1,8 @@
 [alias]
+	br = branch
         co = checkout
-        stat = status
         ci = commit
+        s = status
 [color]
         ui = true
 [user]
