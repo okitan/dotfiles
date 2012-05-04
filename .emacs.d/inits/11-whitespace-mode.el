@@ -8,8 +8,10 @@
 
 ;;; display
 (setq whitespace-display-mappings
-      '((newline-mark ?\n    [?\u21B5 ?\n] [?$ ?\n])
-	(tab-mark     ?\t    [?\xBB ?\t]   [?\\ ?\t])))
+      '(
+;        (newline-mark ?\n    [?\u21B5 ?\n] [?$ ?\n])
+        (tab-mark     ?\t    [?\xBB ?\t]   [?\\ ?\t])
+        ))
 
 ;;; face
 (set-face-foreground 'whitespace-tab "#adff2f")
