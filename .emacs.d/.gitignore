@@ -1,0 +1,8 @@
+auto-install
+el-get
+elisp
+elpa
+
+anything-c-adaptive-history
+
+*.elc

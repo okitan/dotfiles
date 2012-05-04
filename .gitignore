@@ -3,15 +3,6 @@
 \#*
 .\#*
 
-# for emacs.d
-wget-log
-*.elc
-.emacs.d/auto-install
-.emacs.d/el-get
-.emacs.d/elisp
-.emacs.d/elpa
-.emacs.d/anything-c-adaptive-history
-
 # local or disalbe flag
 *.local
 *.orz
