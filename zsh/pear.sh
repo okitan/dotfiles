@@ -1,1 +1,1 @@
-export PATH=$PATH:~/pear/bin
+[[ -e ~/pear ]] && export PATH=$PATH:~/pear/bin
