@@ -7,4 +7,6 @@
   (mapc 'yas/load-directory yas/root-directory)
 
   (yas/global-mode 1)
+
+  (add-to-list 'auto-mode-alist '("\\.yasnippet$" . snippet-mode))
 )
