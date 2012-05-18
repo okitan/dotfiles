@@ -1,1 +1,2 @@
 rvm_auto_reload_flag=1
+rvm_install_on_use=1
