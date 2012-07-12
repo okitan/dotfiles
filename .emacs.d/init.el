@@ -9,7 +9,7 @@
    "https://raw.github.com/dimitri/el-get/master/el-get-install.el"
    (lambda (s)
      (let (el-get-master-branch)
-       (end-of-buffer)
+       (goto-char (point-max))
        (eval-print-last-sexp)))))
 
 ;; original rpc
