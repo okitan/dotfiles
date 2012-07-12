@@ -1,0 +1,13 @@
+# load each zsh. each zshrc can be disabled by touching $file.orz
+load_zshrc() {
+  [[ -f $1 ]] && ! [[ -e $1.orz ]] && source $1
+}
+
+# source file if exist
+source_if_exist() {
+  [[ -f $1 ]] && source $1
+}
+
+respond_to() {
+  [[ `type $1` != "$1 not found" ]]
+}

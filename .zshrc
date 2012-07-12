@@ -10,15 +10,7 @@ setopt hist_ignore_all_dups
 setopt hist_reduce_blanks
 setopt share_history
 
-# load each zsh. each zshrc can be disabled by touching $file.orz
-load_zshrc() {
-  [[ -f $1 ]] && ! [[ -e $1.orz ]] && source $1
-}
-
-# source file if exist
-source_if_exist() {
-  [[ -f $1 ]] && source $1
-}
+source ~/dotfiles/zsh/functions
 
 # I don't know how to loop with each
 eval "`find ${0%/*}/zsh -name "*.sh" | sed "s/^/load_zshrc /g"`"
