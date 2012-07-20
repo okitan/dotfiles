@@ -1,13 +1,17 @@
-[alias]
-	br = branch
-        co = checkout
-        ci = commit
-        s = status
-[color]
-        ui = true
 [user]
         name = okitan
         email = okitakunio@gmail.com
+[include]
+        path = .gitconfig.local
+[core]
+        excludesfile = ~/.gitignore
+[color]
+        ui = true
+[alias]
+        br = branch
+        co = checkout
+        ci = commit
+        s = status
 [gitflow "branch"]
         master = master
         develop = develop
@@ -17,5 +21,3 @@
         hotfix = hotfix/
         support = support/
         versiontag =
-[core]
-	excludesfile = ~/.gitignore
