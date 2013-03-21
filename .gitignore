@@ -3,6 +3,9 @@
 \#*
 .\#*
 
+# mac
+.DS_Store
+
 # local or disalbe flag
 *.local
 *.orz
