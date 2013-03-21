@@ -12,6 +12,9 @@
         co = checkout
         ci = commit
         s = status
+
+        master = checkout master
+
 [gitflow "branch"]
         master = master
         develop = develop
