@@ -9,3 +9,5 @@
 # local or disalbe flag
 *.local
 *.orz
+
+.yas-compiled-snippets.el
