@@ -17,3 +17,6 @@ eval "`find ${0%/*}/zsh -name "*.sh" | sed "s/^/load_zshrc /g"`"
 
 # local settings
 source_if_exist ~/dotfiles/.zshrc.local
+
+# for nginx
+alias sudo="sudo "
