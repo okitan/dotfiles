@@ -1,5 +1,5 @@
 # usage
 
-    curl https://raw.github.com/gist/1569113/dotfiles.sh | sh
+    curl https://gist.github.com/okitan/1569113/raw/dotfiles.sh | sh
 
 See: https://gist.github.com/1569113
