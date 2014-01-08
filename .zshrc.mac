@@ -1,1 +1,7 @@
 alias emacs="$(brew --prefix emacs)/Emacs.app/Contents/MacOS/Emacs -nw"
+
+# for nginx to run on port 80
+alias sudo="sudo "
+
+# brew cask
+export HOMEBREW_CASK_OPTS="--appdir=/Applications
