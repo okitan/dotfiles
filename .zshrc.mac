@@ -4,4 +4,4 @@ alias emacs="$(brew --prefix emacs)/Emacs.app/Contents/MacOS/Emacs -nw"
 alias sudo="sudo "
 
 # brew cask
-export HOMEBREW_CASK_OPTS="--appdir=/Applications
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
