@@ -22,4 +22,7 @@ do
     brew_install_or_upgrade $pkg
 done
 
+# git diff-highlight
+ln -sf `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight /usr/local/bin/diff-highlight
+
 brew cleanup
