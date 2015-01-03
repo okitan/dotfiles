@@ -7,16 +7,9 @@ brew update
 
 IFS=$'\n'
 for pkg in `cat <<EOF
-ag
-brew-cask
-emacs --cocoa
-git   --without-completions
-reattach-to-user-namespace
-source-highlight
-tmux
-tree
-wget
-zsh
+hub
+node
+tig
 EOF`
 do
     brew_install_or_upgrade $pkg
