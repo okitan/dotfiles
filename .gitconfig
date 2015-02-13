@@ -27,6 +27,7 @@
 [rebase]
 	stat = true
 [push]
+	set-upstream = true
 	#default = simple
 
 [pager]
