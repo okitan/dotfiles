@@ -8,7 +8,7 @@ brew update
 IFS=$'\n'
 for pkg in `cat <<EOF
 ag
-brew-cask
+caskroom/cask/brew-cask
 emacs --cocoa
 git   --without-completions
 reattach-to-user-namespace
@@ -25,4 +25,4 @@ done
 # git diff-highlight
 ln -sf `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight /usr/local/bin/diff-highlight
 
-brew cleanup
+brew_cleanup_all

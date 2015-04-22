@@ -26,4 +26,4 @@ do
     pip3 install $pkg
 done
 
-brew cleanup
+brew_cleanup_all

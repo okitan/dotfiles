@@ -8,3 +8,8 @@ function brew_install_or_upgrade {
         brew upgrade $module_with_options
     fi
 }
+
+function brew_cleanup_all {
+    brew cleanup
+    brew cask cleanup
+}

@@ -15,4 +15,4 @@ do
     brew_install_or_upgrade $pkg
 done
 
-brew cleanup
+brew_cleanup_all

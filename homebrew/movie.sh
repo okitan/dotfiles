@@ -7,4 +7,4 @@ brew update
 
 brew_install_or_upgrade mkvtoolnix
 
-brew cleanup
+brew_cleanup_all
