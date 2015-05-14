@@ -17,9 +17,8 @@ if [[ ! -d .oh-my-zsh ]]
 # added by ~/dotfiles/bootstrap.sh
 [[ -e ~/dotfiles/.zshrc ]] && source ~/dotfiles/.zshrc
 
-export LANG=ja_JP.UTF-8
+# you can add very local things here
 EOF
 fi
 
 cd -
-EOF
