@@ -9,7 +9,7 @@ for target in $targets; do
     ln -s ~/dotfiles/$target ~
 done
 
-if [[ ! -d .oh-my-zsh ]]
+if [[ ! -d .oh-my-zsh ]]; then
    curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
    sed -i "" -e "s/^plugins=.*/plugins=\(brew cpanm gem git github osx perl rake ruby rvm\)/" .zshrc
@@ -19,9 +19,10 @@ if [[ ! -d .oh-my-zsh ]]
 
 # you can add very local things here
 EOF
+
 fi
 
 echo "okitan dotfiles setupped"
-cat README.md
+cat ~/dotfiles/README.md
 
 cd -
