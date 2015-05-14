@@ -1,3 +1,3 @@
 set nu
-colorscheme darkblue
 
+syntax on
