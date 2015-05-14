@@ -1,5 +1,5 @@
 # USAGE
-# echo "[[ -f ~/dotfiles/.zshrc ]] && source ~/dotfiles/.zshrc" >> ~/.zshrc
+# echo "[[ -e ~/dotfiles/.zshrc ]] && source ~/dotfiles/.zshrc" >> ~/.zshrc
 
 # PROMPT
 PROMPT='%{$fg_bold[red]%}➜ '
