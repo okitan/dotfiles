@@ -8,7 +8,6 @@ brew update
 IFS=$'\n'
 for pkg in `cat <<EOF
 ag
-caskroom/cask/brew-cask
 emacs --cocoa
 git   --without-completions
 reattach-to-user-namespace

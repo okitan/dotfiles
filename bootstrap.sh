@@ -9,6 +9,7 @@ for target in $targets; do
     ln -s ~/dotfiles/$target ~
 done
 
+# zsh needs oh-my-zsh
 if [[ ! -d .oh-my-zsh ]]; then
    curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
@@ -23,6 +24,7 @@ EOF
 fi
 
 echo "okitan dotfiles setupped"
-cat ~/dotfiles/README.md
+echo "when you use mac install homebrew"
+echo "$ homebrew/bootstrap.sh"
 
 cd -
