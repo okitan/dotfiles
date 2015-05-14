@@ -21,4 +21,7 @@ if [[ ! -d .oh-my-zsh ]]
 EOF
 fi
 
+echo "okitan dotfiles setupped"
+cat README.md
+
 cd -
