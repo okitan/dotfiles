@@ -1,15 +1,13 @@
 #!/usr/bin/env sh
 
-# load breq_install_or_upgrade
+# load brew_install_or_upgrade
 source `dirname $0`/function.sh
-
-brew update
 
 IFS=$'\n'
 for pkg in `cat <<EOF
 ag
-emacs --cocoa
-git   --without-completions
+git --without-completions
+gpg
 reattach-to-user-namespace
 source-highlight
 tmux
@@ -24,4 +22,19 @@ done
 # git diff-highlight
 ln -sf `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight /usr/local/bin/diff-highlight
 
-brew_cleanup_all
+
+IFS=$'\n'
+for pkg in `cat <<EOF
+atom
+dropbox
+karabiner
+google-chrome
+google-japanese-ime
+iterm2
+EOF`
+do
+    brew_cask_install_or_upgrade $pkg
+done
+
+# TODO:
+# write how to setup Karabiner

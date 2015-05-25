@@ -15,7 +15,8 @@ function brew_cask_install_or_upgrade {
 
     brew cask install $module_with_options
     if [ $? ]; then
-        brew cask upgrade $module_with_options
+        echo "wait for upgrade command" > /dev/null
+#        brew cask upgrade $module_with_options
     fi
 }
 
