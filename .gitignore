@@ -10,4 +10,8 @@
 *.local
 *.orz
 
+# ruby
+.ruby-version
+.ruby-gemset
+
 .yas-compiled-snippets.el
