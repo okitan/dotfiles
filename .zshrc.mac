@@ -5,3 +5,6 @@ alias sudo="sudo "
 
 # brew cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# docker
+#eval "$(boot2docker shellinit)"

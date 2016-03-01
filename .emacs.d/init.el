@@ -18,7 +18,7 @@
         (:name init-loader
                :type http
                :description "init-loader"
-               :url "https://raw.github.com/gist/1021706/init-loader.el")
+               :url "https://gist.githubusercontent.com/zqwell/1021706/raw/b9aff51e7e40afa7abb3c7d6ef7708993ad93b04/init-loader.el")
         ))
 (el-get 'sync)
 
