@@ -37,6 +37,7 @@ defaults write com.apple.menuextra.clock DateFormat -string "M\U6708d\U65e5(EEE)
 
 ## finder
 defaults write NSGlobalDomain   AppleShowAllExtensions -bool   true
+defaults write com.apple.finder AppleShowAllExtensions -bool   true
 defaults write com.apple.finder ShowTabView            -bool   true
 defaults write com.apple.finder NewWindowTarget        -string "PfLo"
 defaults write com.apple.finder NewWindowTargetPath    -string "file://${HOME}/Downloads/"
