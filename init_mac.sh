@@ -12,9 +12,10 @@ function set_plist() {
 ||  /usr/libexec/PlistBuddy -c "Set ${key}         ${value}" ${file}
 }
 
+# it does not work?
 set_plist com.apple.recentitems.plist :RecentApplications:MaxAmount integer 0
 set_plist com.apple.recentitems.plist :RecentDocuments:MaxAmount    integer 0
-set_plist com.apple.recentitems.plist :RecentServers:MaxAmount      integer 5
+set_plist com.apple.recentitems.plist :RecentServers:MaxAmount      integer 0
 
 ## spotlight
 # TODO:
@@ -50,6 +51,13 @@ killall Dock
 killall SystemUIServer
 
 # more instructions
-echo install XCode from AppStore manually
-echo set ssh key for github
-echo run: \`curl https://raw.githubusercontent.com/okitan/dotfiles/master/bootstrap.sh \| sh\`
+cat <<EOF
+1. install XCode from AppStore manually and run commands
+    sudo xcodebuild -license
+    xcode-select --install
+
+2. set ssh key for github
+
+3. run bootstrap.sh
+    curl https://raw.githubusercontent.com/okitan/dotfiles/master/bootstrap.sh | sh
+EOF
