@@ -9,15 +9,20 @@ function brew_install_or_upgrade {
     fi
 }
 
-function brew_cask_install_or_upgrade {
+# for apps updated automatically
+function brew_cask_install {
     IFS=' '
     module_with_options=`echo $*`
 
     brew cask install $module_with_options
-    if [ $? ]; then
-        echo "wait for upgrade command" > /dev/null
-#        brew cask upgrade $module_with_options
-    fi
+}
+
+# for apps update need manually
+function brew_cask_install_or_upgrade {
+    IFS=' '
+    module_with_options=`echo $*`
+
+    brew cask install --force $module_with_options
 }
 
 function brew_cleanup_all {

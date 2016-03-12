@@ -6,6 +6,7 @@ source `dirname $0`/function.sh
 IFS=$'\n'
 for pkg in `cat <<EOF
 ag
+curl
 git --without-completions
 gpg
 reattach-to-user-namespace
@@ -22,7 +23,6 @@ done
 # git diff-highlight
 ln -sf `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight /usr/local/bin/diff-highlight
 
-
 IFS=$'\n'
 for pkg in `cat <<EOF
 atom
@@ -33,7 +33,7 @@ google-japanese-ime
 iterm2
 EOF`
 do
-    brew_cask_install_or_upgrade $pkg
+    brew_cask_install $pkg
 done
 
 # TODO:
