@@ -51,4 +51,5 @@ killall SystemUIServer
 
 # more instructions
 echo install XCode from AppStore manually
+echo set ssh key for github
 echo run: \`curl https://raw.githubusercontent.com/okitan/dotfiles/master/bootstrap.sh \| sh\`
