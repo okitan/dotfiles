@@ -1,4 +1,4 @@
-# okita/dotfiles
+# okitan/dotfiles
 
 ## setup
 
@@ -22,4 +22,4 @@ $ homebrew/common.sh
 
 ## osx
 
-See: osx/README.md
+See: [osx/README.md](./osx)
