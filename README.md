@@ -2,7 +2,7 @@
 
 ```bash
 # for mac
-curl https://raw.githubusercontent.com/okitan/dotfiles/master/init_mac.sh  | sh
+curl https://raw.githubusercontent.com/okitan/dotfiles/master/osx/init.sh  | sh
 # ssh key needed
 curl https://raw.githubusercontent.com/okitan/dotfiles/master/bootstrap.sh | sh
 ```
