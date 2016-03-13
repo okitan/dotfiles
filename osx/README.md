@@ -19,3 +19,12 @@ osx/homebrew/install.sh common emacs
 ```bash
 ln -s ~/dotfiles/osx/.zshrc.local ~/dotfiles/
 ```
+
+## karabiner
+
+After install by `osx/homebrew/common.sh`.
+Run Karabiner and accept permissions and do below.
+
+```bash
+osx/karabiner.sh
+```
