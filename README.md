@@ -1,9 +1,9 @@
-# usage
+# okita/dotfiles
+
+## setup
 
 ```bash
-# for mac
-curl https://raw.githubusercontent.com/okitan/dotfiles/master/osx/init.sh  | sh
-# ssh key needed
+# you need private key of github
 curl https://raw.githubusercontent.com/okitan/dotfiles/master/bootstrap.sh | sh
 ```
 
@@ -17,3 +17,9 @@ After bootstrapping, You can install apps using homebrew.
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 $ homebrew/common.sh
 ```
+
+# Env specific
+
+## osx
+
+See: osx/README.md

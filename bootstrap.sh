@@ -23,8 +23,12 @@ EOF
 
 fi
 
-echo "okitan dotfiles setupped"
-echo "when you use mac install homebrew"
-echo "$ homebrew/bootstrap.sh"
+cat <<EOF
+okitan/dotfiles setup complete
+
+when you use mac, install homebrew and follow instructions
+   cd ~/dotfiles
+   osx/homebrew/bootstrap.sh
+EOF
 
 cd -
