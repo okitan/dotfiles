@@ -1,5 +1,7 @@
 #!/bin/sh
 
+xcode-select --install
+
 # mac settings (NSGlobalDomain can be replaced with -g)
 ## general
 function set_plist() {
@@ -53,12 +55,8 @@ killall SystemUIServer
 
 # more instructions
 cat <<EOF
-1. install XCode from AppStore manually and run commands
-    sudo xcodebuild -license
-    xcode-select --install
+1. set ssh key for github
 
-2. set ssh key for github
-
-3. run bootstrap.sh
+2. run bootstrap.sh
     curl https://raw.githubusercontent.com/okitan/dotfiles/master/bootstrap.sh | sh
 EOF

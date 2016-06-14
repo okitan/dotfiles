@@ -1,26 +1,38 @@
 # OSX
 
-## homebrew management
+## Before Bootstrapping
 
-### setup
-
-```bash
-osx/homebrew/bootstrap.sh
-```
-
-### install Formulas
+Run commands to prepare bootstrap and configure osx appearance.
 
 ```bash
-osx/homebrew/install.sh common emacs
+osx/init.sh
 ```
 
-## zsh
+## After Bootstrapping
+
+### zsh
 
 ```bash
 ln -s ~/dotfiles/osx/.zshrc.local ~/dotfiles/
 ```
 
-## karabiner
+### homebrew management
+
+#### setup
+
+`.zshr.local` defines path to install homebrew cask.  Run above zsh configuration before this.
+
+```bash
+osx/homebrew/bootstrap.sh
+```
+
+#### install Formulas
+
+```bash
+osx/homebrew/install.sh common emacs
+```
+
+### karabiner
 
 After install by `osx/homebrew/common.sh`.
 Run Karabiner and accept permissions and do below.
