@@ -36,5 +36,22 @@ do
     brew_cask_install $pkg
 done
 
-# TODO:
-# write how to setup Karabiner
+# more instructions
+cat <<EOF
+* atom
+ * TODO: apm
+* dropbox
+ * run, signin and choose which folders to sync
+* karabiner
+ * run karabiner
+ * allow AXNotifier
+ * run osx/karabiner.sh to configure
+* google-chrome
+ * run and make it default browser
+* google-japanese-ime
+ * run ConfigDialog from LaunchPad and reboot
+ * open IME Configuration screen and add it
+ * TODO: configuration script?
+* iterm2
+ * TODO: configuration script?
+EOF
