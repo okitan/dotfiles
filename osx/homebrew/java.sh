@@ -1,4 +1,4 @@
-source `dirname $0`/function.sh
+source `dirname $0`/function
 
 IFS=$'\n'
 for pkg in `cat <<EOF

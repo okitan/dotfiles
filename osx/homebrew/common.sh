@@ -1,7 +1,4 @@
-#!/usr/bin/env sh
-
-# load brew_install_or_upgrade
-source `dirname $0`/function.sh
+source `dirname $0`/function
 
 IFS=$'\n'
 for pkg in `cat <<EOF

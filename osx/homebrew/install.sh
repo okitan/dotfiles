@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 brew update
 
 for arg in $*
