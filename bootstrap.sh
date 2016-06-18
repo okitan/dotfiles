@@ -19,8 +19,6 @@ if [[ ! -d .oh-my-zsh ]]; then
    cat <<EOF >> .zshrc
 # added by ~/dotfiles/bootstrap.sh
 [[ -e ~/dotfiles/.zshrc ]] && source ~/dotfiles/.zshrc
-
-# you can add very local things here
 EOF
 
 fi
