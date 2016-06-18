@@ -21,6 +21,11 @@ source ~/dotfiles/zsh/functions
 # FIXME: use for
 eval "`find ${0%/*}/zsh -name "*.sh" | sed "s/^/load_zshrc /g"`"
 
+# RVM
+if [[ -e ~/.rvm ]]; then
+  source ~/.rvm/scripts/rvm
+fi
+
 # local settings
 source_if_exist ~/.zshrc.secret
 source_if_exist ~/dotfiles/.zshrc.local

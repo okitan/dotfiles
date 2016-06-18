@@ -1,3 +1,5 @@
+#/usr/bin/env sh
+
 cd ~
 
 [[ -d dotfiles ]] || git clone git@github.com:okitan/dotfiles.git
