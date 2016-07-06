@@ -5,7 +5,7 @@ cd ~
 [[ -d dotfiles ]] || git clone git@github.com:okitan/dotfiles.git
 
 # override dotfiles
-targets=".bundle .emacs.d .gemrc .gitconfig .gitignore .pryrc .rspec .rvmrc .tmux.conf .vimrc"
+targets=".bundle .commit_template .emacs.d .gemrc .gitconfig .gitignore .pryrc .rspec .rvmrc .tmux.conf .vimrc"
 for target in $targets; do
     [[ -e $target ]] && mv $target $target.old
     ln -s ~/dotfiles/$target ~

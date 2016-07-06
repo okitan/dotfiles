@@ -36,3 +36,7 @@
         diff = diff-highlight | less
 [fetch]
         prune = true
+[diff]
+	compactionHeuristic = true
+[commit]
+	template = /Users/okita.kunio/.commit_template
