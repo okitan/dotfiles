@@ -17,3 +17,6 @@
 
 .editorconfig
 .yas-compiled-snippets.el
+
+# secret
+.envrc
