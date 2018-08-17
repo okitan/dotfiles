@@ -6,6 +6,9 @@
 # LANG
 export LANG=ja_JP.UTF-8
 
+# ENVS
+export EDITOR=vi
+
 # PROMPT
 PROMPT='%{$fg_bold[red]%}➜ '
 RPROMPT='%{$reset_color%} %~ %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%}%{$reset_color%}'

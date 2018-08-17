@@ -4,6 +4,7 @@ IFS=$'\n'
 for pkg in `cat <<EOF
 ag
 curl
+direnv
 git --without-completions
 gpg
 reattach-to-user-namespace
