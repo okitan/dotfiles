@@ -1,54 +1,40 @@
 #!/bin/bash
 
-set -xu
+set -eu
 
 # homebrew setup
 ( set -x
-  [[ -x /usr/bin/local/brew ]] || \
+  [[ -x /usr/local/bin/brew ]] || \
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 )
 
 ( set -x
   # for app store See: https://github.com/mas-cli/mas
-  # <- for >= 10.13 / for < 10.13 ->
-  brew install mas || brew install mas-cli/mas/mas
+  [[ -x /usr/local/bin/mas ]] || \
+    # <- for >= 10.13 / for < 10.13 ->
+    brew install mas || brew install mas-cli/mas/mas
 )
 
 # use homebrew with priority
 line_to_insert='PATH="/usr/local/bin:$PATH"'
 ( set -x
-    if ! grep "$line_to_insert" .zshrc > /dev/null; then
-      cat <<__EOF__ >> .zshrc
+    if ! grep "$line_to_insert" ~/.zshrc > /dev/null; then
+      cat <<__EOF__ >> ~/.zshrc
 
-    $line_to_insert
+$line_to_insert
 __EOF__
+    fi
 )
 
-# install commons
-( cd ($dirname $0) || || (echo "cd fails" && exit 127)
-  echo "Now I'm on $(pwd)"
-
-  ./common.sh
-)
-
-cat <<EOF
-0. setup cask installation pass
-    ln -s ~/dotfiles/.zshrc.mac ~/dotfiles/.zshrc.local
-    exit
-
+( cd $(dirname $0) || (echo "cd failed" && exit 127)
+  cat <<__EOF__
 1. setup standard env
     homebrew/common.sh
 
 2. after that install what you need
-   homebrew/install.sh *GROUP
+   homebrew/\${GROUP}.sh
 
-GROUP are now
-* dev
-* emacs
-* java
-* notebook
- * this should be done in docker...
-* selenium
-
-TODO: docker
-EOF
+GROUP are...
+$(find *.sh | grep -v bootstrap | xargs -I{} -L 1 basename {} .sh)
+__EOF__
+)

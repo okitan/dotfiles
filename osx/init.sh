@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -eux
+
 xcode-select --install
 
 # mac settings (NSGlobalDomain can be replaced with -g)
@@ -58,5 +60,5 @@ cat <<EOF
 1. set ssh key for github
 
 2. run bootstrap.sh
-    curl https://raw.githubusercontent.com/okitan/dotfiles/master/bootstrap.sh | sh
+    curl https://raw.githubusercontent.com/okitan/dotfiles/master/bootstrap.sh | bash
 EOF
