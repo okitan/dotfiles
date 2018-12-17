@@ -1,10 +1,35 @@
-#!/usr/bin/env sh
+#!/bin/bash
+
+set -xu
 
 # homebrew setup
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+( set -x
+  [[ -x /usr/bin/local/brew ]] || \
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+)
 
-# plugins
-brew tap caskroom/cask
+( set -x
+  # for app store See: https://github.com/mas-cli/mas
+  # <- for >= 10.13 / for < 10.13 ->
+  brew install mas || brew install mas-cli/mas/mas
+)
+
+# use homebrew with priority
+line_to_insert='PATH="/usr/local/bin:$PATH"'
+( set -x
+    if ! grep "$line_to_insert" .zshrc > /dev/null; then
+      cat <<__EOF__ >> .zshrc
+
+    $line_to_insert
+__EOF__
+)
+
+# install commons
+( cd ($dirname $0) || || (echo "cd fails" && exit 127)
+  echo "Now I'm on $(pwd)"
+
+  ./common.sh
+)
 
 cat <<EOF
 0. setup cask installation pass

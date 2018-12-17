@@ -1,49 +1,58 @@
-source `dirname $0`/function
+#!/bin/bash
+
+set -eu
+
+source $(dirname $0)/function
+
+# they need additional configurations
+( cd $(dirnma $0) || (echo "cd fails" && exit 127)
+  echo "Now I'm on $(pwd)"
+
+  ./zsh.sh
+  ./git.sh
+
+  ./atom.sh
+  ./karabiner.sh
+)
 
 IFS=$'\n'
 for pkg in `cat <<EOF
 ag
+awk
 curl
 direnv
-git --without-completions
 gpg
 reattach-to-user-namespace
-source-highlight
 tmux
 tree
 wget
-zsh
 EOF`
 do
-    brew_install_or_upgrade $pkg
+  brew_install_or_upgrade $pkg
 done
 
-# git diff-highlight
-ln -sf `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight /usr/local/bin/diff-highlight
-
+# these casks will update automatically
 IFS=$'\n'
 for pkg in `cat <<EOF
-atom
 dropbox
-karabiner
 google-chrome
 google-japanese-ime
 iterm2
 EOF`
 do
-    brew_cask_install $pkg
+  HOMEBREW_CASK_OPTS="--appdir=/Applications" brew_cask_install $pkg
 done
 
 # more instructions
 cat <<EOF
-* atom
- * TODO: apm
 * dropbox
  * run, signin and choose which folders to sync
 * karabiner
  * run karabiner
  * allow AXNotifier
  * run osx/karabiner.sh to configure
+* karabiner-elements
+ * TODO:
 * google-chrome
  * run and make it default browser
 * google-japanese-ime
