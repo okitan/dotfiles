@@ -1,40 +1,28 @@
 [user]
-        name = okitan
-        email = okitakunio@gmail.com
+	name = okitan
+	email = okitakunio@gmail.com
 [include]
-        path = .gitconfig.local
+	path = .gitconfig.local
 [core]
-        excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore
 [color]
-        ui = true
+	ui = true
 [alias]
-        br = branch
-        co = checkout
-        ci = commit
-        s = status
+	br = branch
+	co = checkout
+	ci = commit
+	s = status
 
-        master = checkout master
-
-[gitflow "branch"]
-        master = master
-        develop = develop
-[gitflow "prefix"]
-        feature = feature/
-        release = release/
-        hotfix = hotfix/
-        support = support/
-        versiontag =
+	master = checkout master
 [rebase]
 	stat = true
 [push]
 	set-upstream = true
-	#default = simple
-
 [pager]
-        log  = diff-highlight | less
-        show = diff-highlight | less
-        diff = diff-highlight | less
+	log  = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
 [fetch]
-        prune = true
+	prune = true
 [diff]
 	compactionHeuristic = true
