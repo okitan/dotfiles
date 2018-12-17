@@ -1,0 +1,54 @@
+"*":
+  core:
+    audioBeep: false
+    debugLSP: true
+    destroyEmptyPanes: false
+    disabledPackages: [
+      "linter"
+      "linter-ui-default"
+      "linter-textlint"
+    ]
+    excludeVcsIgnoredPaths: false
+    telemetryConsent: "no"
+  editor:
+    fontSize: 16
+    invisibles: {}
+    preferredLineLength: 120
+    showIndentGuide: true
+    showInvisibles: true
+    tabType: "soft"
+  "exception-reporting":
+    userId: "38d6f2ca-9e6e-6a0f-d808-209d2ce5f15f"
+  "go-plus":
+    config:
+      compileOnSave: false
+  "ide-ruby":
+    imageName: "okitan/ruby_language_server:latest"
+  "linter-ui-default": {}
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+      showInStatusBar: true
+    prettierOptions:
+      printWidth: 120
+      singleQuote: true
+      trailingComma: "es5"
+    scopes: {}
+    useEslint: true
+  "spell-check":
+    locales: [
+      "en-"
+    ]
+  "tree-view": {}
+  welcome:
+    showOnStartup: false
+".feature.source":
+  editor:
+    preferredLineLength: 120
+".gemfile.ruby.source":
+  editor:
+    showIndentGuide: true
+    showInvisibles: true
+".ruby.source":
+  editor:
+    showIndentGuide: true
