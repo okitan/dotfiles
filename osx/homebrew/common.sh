@@ -22,7 +22,6 @@ awk
 curl
 direnv
 gpg
-reattach-to-user-namespace
 tmux
 tree
 wget
