@@ -1,34 +1,54 @@
-#/usr/bin/env sh
+#!/bin/bash
 
-cd ~
+set -eu
 
-[[ -d dotfiles ]] || git clone git@github.com:okitan/dotfiles.git
+# do in subshell
+(cd ~ || (echo "cd fails" && exit 127)
+  echo "Now I'm on $(pwd)"
 
-# override dotfiles
-targets=".bundle .commit_template .emacs.d .gemrc .gitconfig .gitignore .pryrc .rspec .rvmrc .tmux.conf .vimrc"
-for target in $targets; do
-    [[ -e $target ]] && mv $target $target.old
-    ln -s ~/dotfiles/$target ~
-done
+  # install self
+  dir=~/dotfiles
+  ( set -x
+    [[ -d $dir ]] || git clone git@github.com:okitan/dotfiles.git
+  )
 
-# zsh needs oh-my-zsh
-if [[ ! -d .oh-my-zsh ]]; then
-   curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+  # override dotfiles
+  targets=".bundle .commit_template .emacs.d .gemrc .gitconfig .gitignore .pryrc .rspec .rvmrc .tmux.conf .vimrc"
+  for target in $targets; do
+    ( set -x
+      [[ -e "$target" && (! -L "$target") ]] && mv "$target"{,.bak}
+      ln -sf "$dir"/"$target" ~
+    )
+  done
 
-   sed -i "" -e "s/^plugins=.*/plugins=\(brew cpanm gem git github osx perl rake ruby rvm\)/" .zshrc
-   cat <<EOF >> .zshrc
-# added by ~/dotfiles/bootstrap.sh
-[[ -e ~/dotfiles/.zshrc ]] && source ~/dotfiles/.zshrc
-EOF
+  # install oh-my-zsh
+  if [[ ! -d .oh-my-zsh ]]; then
+    ( set -x
+      curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
-fi
+      sed -i "" -e "s/^plugins=.*/plugins=\\(brew cpanm gem git github osx perl rake ruby rvm\\)/" .zshrc
+    )
+  fi
 
-cat <<EOF
+  # after installing oh-my-zsh inject local .zshrc
+  line_to_insert="[[ -e ~/dotfiles/.zshrc ]] && source ~/dotfiles/.zshrc"
+  ( set -x
+    if ! grep "$line_to_insert" .zshrc > /dev/null; then
+      cat <<__EOF__ >> .zshrc
+
+# load https://github.com/okitan/dotfiles
+$line_to_insert
+__EOF__
+    fi
+  )
+)
+
+# further announcement
+  cat <<__EOF__
 okitan/dotfiles setup complete
 
 when you use mac, install homebrew and follow instructions
-   cd ~/dotfiles
-   osx/homebrew/bootstrap.sh
-EOF
+  $ osx/bootstrap.sh
 
-cd -
+You can also set secrets manually to `~/.zshrc.secret`
+__EOF__

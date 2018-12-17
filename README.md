@@ -4,12 +4,13 @@
 
 ```bash
 # you need private key of github
-curl https://raw.githubusercontent.com/okitan/dotfiles/master/bootstrap.sh | sh
+curl https://raw.githubusercontent.com/okitan/dotfiles/master/bootstrap.sh | bash
 ```
 
 The script includes
-* links dotfiles
-* install oh-my-zsh
+
+- links dotfiles
+- install oh-my-zsh
 
 Enjoy!
 
