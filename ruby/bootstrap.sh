@@ -12,7 +12,11 @@ set -eu
 
 # link rvmrc
 (cd $(dirname $0) || (echo "cd failed" && exit 127)
-  set -x
-  [[ -d ~/.rvmrc && (! -L ~/.rvmrc ) ]] && mv ~/.rvmrc{,.bak}
-  ln -sf $(pwd)/.rvmrc ~
+  targets=".pryrc .rspec .rvmrc"
+  for target in $targets; do
+    ( set -x
+      [[ -d ~/"$target" && (! -L ~/"$target" ) ]] && mv ~/"$target"{,.bak}
+      ln -sf $(pwd)/"$target" ~
+    )
+  done
 )
