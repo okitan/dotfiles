@@ -12,7 +12,7 @@ set -eu
 
 # link rvmrc
 (cd $(dirname $0) || (echo "cd failed" && exit 127)
-  targets=".bundle .pryrc .rspec .rvmrc"
+  targets=".bundle .gemrc .pryrc .rspec .rvmrc"
   for target in $targets; do
     ( set -x
       [[ -d ~/"$target" && (! -L ~/"$target" ) ]] && mv ~/"$target"{,.bak}

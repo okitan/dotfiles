@@ -13,7 +13,7 @@ set -eu
   )
 
   # override dotfiles
-  targets=".commit_template .emacs.d .gemrc .gitconfig .gitignore .tmux.conf .vimrc"
+  targets=".commit_template .emacs.d .gitconfig .gitignore .tmux.conf .vimrc"
   for target in $targets; do
     ( set -x
       [[ -e "$target" && (! -L "$target") ]] && mv "$target"{,.bak}
