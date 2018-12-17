@@ -29,4 +29,4 @@ $ ${GROUP}/bootstrap.sh
 GROUP are:
 
 - atom
-- rvm
+- ruby
