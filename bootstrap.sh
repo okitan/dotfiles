@@ -13,7 +13,7 @@ set -eu
   )
 
   # override dotfiles
-  targets=".bundle .commit_template .emacs.d .gemrc .gitconfig .gitignore .pryrc .rspec .rvmrc .tmux.conf .vimrc"
+  targets=".bundle .commit_template .emacs.d .gemrc .gitconfig .gitignore .pryrc .rspec rvm/.rvmrc .tmux.conf .vimrc"
   for target in $targets; do
     ( set -x
       [[ -e "$target" && (! -L "$target") ]] && mv "$target"{,.bak}
@@ -47,8 +47,5 @@ __EOF__
   cat <<__EOF__
 okitan/dotfiles setup complete
 
-when you use mac, install homebrew and follow instructions
-  $ osx/bootstrap.sh
-
-You can also set secrets manually to `~/.zshrc.secret`
+for more information See: README.md
 __EOF__

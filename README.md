@@ -19,3 +19,14 @@ Enjoy!
 ## osx
 
 See: [osx/README.md](./osx)
+
+# Options
+
+```console
+$ ${GROUP}/bootstrap.sh
+```
+
+GROUP are:
+
+- atom
+- rvm
