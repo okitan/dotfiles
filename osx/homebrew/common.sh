@@ -34,6 +34,7 @@ done
 IFS=$'\n'
 for pkg in `cat <<EOF
 dropbox
+franz
 google-chrome
 google-japanese-ime
 iterm2
