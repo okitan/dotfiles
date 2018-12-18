@@ -5,7 +5,7 @@ set -eu
 source $(dirname $0)/function
 
 # they need additional configurations
-( cd $(dirnma $0) || (echo "cd fails" && exit 127)
+( cd $(dirname $0) || (echo "cd fails" && exit 127)
   echo "Now I'm on $(pwd)"
 
   ./zsh.sh

@@ -6,6 +6,11 @@ source $(dirname $0)/function
 
 brew_install_or_upgrade zsh
 
+# chsh
+shell=/usr/local/bin/zsh
 ( set -x
-  chsh -s /usr/local/bin/zsh
+  if ! grep $shell /etc/shells; then
+    sudo tee -a /etc/shells <<< $shell
+  fi
+  chsh -s $shell
 )

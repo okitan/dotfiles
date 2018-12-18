@@ -26,6 +26,7 @@ set -eu
     ( set -x
       curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
+      # FIXME: maybe something weired
       sed -i "" -e "s/^plugins=.*/plugins=\\(brew cpanm gem git github osx perl rake ruby rvm\\)/" .zshrc
     )
   fi

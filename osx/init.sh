@@ -2,7 +2,7 @@
 
 set -eux
 
-xcode-select --install
+xcode-select --install || true
 
 # mac settings (NSGlobalDomain can be replaced with -g)
 ## general
