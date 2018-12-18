@@ -2,10 +2,10 @@
 
 set -eu
 
+source $(dirname $0)/function
+
 # needs awk
-( set -x
-  brew install jq || true
-)
+brew_install_or_upgrade awk
 
 if [[ $(sw_vers -productVersion | awk -F'[.]' '{print $2}') > 11 ]]; then
   ( set -x

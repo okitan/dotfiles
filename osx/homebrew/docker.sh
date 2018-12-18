@@ -1,9 +1,5 @@
-source `dirname $0`/function
+#!/bin/bash
 
-IFS=$'\n'
-for pkg in `cat <<EOF
-docker
-EOF`
-do
-    brew_cask_install $pkg
-done
+set -eu
+
+brew cask install docker --appdir=/Applications

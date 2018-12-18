@@ -39,7 +39,7 @@ google-japanese-ime
 iterm2
 EOF`
 do
-  HOMEBREW_CASK_OPTS="--appdir=/Applications" brew_cask_install $pkg
+  brew cask install $pkg --appdir=/Applications
 done
 
 # more instructions

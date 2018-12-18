@@ -26,8 +26,8 @@ __EOF__
     fi
 )
 
-( cd $(dirname $0) || (echo "cd failed" && exit 127)
-  cat <<__EOF__
+
+cat <<__EOF__
 1. setup standard env
     homebrew/common.sh
 
@@ -35,6 +35,5 @@ __EOF__
    homebrew/\${GROUP}.sh
 
 GROUP are...
-$(find *.sh | grep -v bootstrap | xargs -I{} -L 1 basename {} .sh)
+$(find $(dirname $0)/*.sh | grep -v bootstrap | xargs -I{} -L 1 basename {} .sh)
 __EOF__
-)

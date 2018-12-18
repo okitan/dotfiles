@@ -1,9 +1,7 @@
-source `dirname $0`/function
+#!/bin/bash
 
-IFS=$'\n'
-for pkg in `cat <<EOF
-emacs --cocoa
-EOF`
-do
-    brew_install_or_upgrade $pkg
-done
+set -eu
+
+source $(dirname $0)/function
+
+brew_install_or_upgrade emacs --cocoa
