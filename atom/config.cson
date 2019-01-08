@@ -22,8 +22,7 @@
   "go-plus":
     config:
       compileOnSave: false
-  "ide-ruby":
-    imageName: "okitan/ruby_language_server:latest"
+  "ide-ruby": {}
   "linter-ui-default": {}
   "prettier-atom":
     formatOnSaveOptions:
