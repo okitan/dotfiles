@@ -22,7 +22,7 @@ setopt share_history
 source ~/dotfiles/zsh/functions
 
 # FIXME: use for
-eval "`find ${0%/*}/zsh -name "*.sh" | sed "s/^/load_zshrc /g"`"
+eval "`find ${0%/*}/zsh -name "*.sh" | sort | sed "s/^/load_zshrc /g"`"
 
 # local settings
 source_if_exist ~/.zshrc.secret

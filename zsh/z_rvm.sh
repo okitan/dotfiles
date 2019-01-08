@@ -1,3 +1,5 @@
+# This should be done last (if not rvm complains of it)
+
 if [[ -e ~/.rvm ]]; then
   source ~/.rvm/scripts/rvm
 

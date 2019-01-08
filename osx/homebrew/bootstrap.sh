@@ -15,18 +15,6 @@ set -eu
     brew install mas || brew install mas-cli/mas/mas
 )
 
-# use homebrew with priority
-line_to_insert='PATH="/usr/local/bin:$PATH"'
-( set -x
-    if ! grep "$line_to_insert" ~/.zshrc > /dev/null; then
-      cat <<__EOF__ >> ~/.zshrc
-
-$line_to_insert
-__EOF__
-    fi
-)
-
-
 cat <<__EOF__
 1. setup standard env
     homebrew/common.sh
