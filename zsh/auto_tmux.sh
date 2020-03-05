@@ -1,14 +1,16 @@
 function auto_tmux() {
-    not_attached_sessions=`tmux ls 2>/dev/null | grep -v attached`
-    if [[ `print $not_attached_sessions | wc -l` -le 1 ]]; then
-        tmux
+    current_dir=$(basename "$(pwd)")
+    
+    not_attached_sessions=$(tmux ls 2>/dev/null | grep -v attached)
+    if [[ -z "$not_attached_sessions" ]]; then
+        tmux new-session -s "$current_dir"
     else
-        session=`print $not_attached_sessions | head -n 1  | cut -d ":" -f 1`
-        if [[ "$session" != "" ]]; then
-            tmux attach -t $session
+        found=$(print "$not_attached_sessions" | grep "$current_dir:")
+        
+        if [[ -n "$found" ]]; then
+            tmux attach -t "$(print "$found" | head -n 1 | cut -d ":" -f 1)"
         else
-            echo $not_attached_sessions
-            echo $session
+            tmux attach -t "$(print "$not_attached_sessions" | head -n 1  | cut -d ":" -f 1)"
         fi
     fi
 }
