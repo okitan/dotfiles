@@ -1,11 +1,13 @@
+function new_tmux() {
+    tmux new-session -s "$(basename "$(pwd)")"
+}
+
 function auto_tmux() {
-    current_dir=$(basename "$(pwd)")
-    
     not_attached_sessions=$(tmux ls 2>/dev/null | grep -v attached)
     if [[ -z "$not_attached_sessions" ]]; then
-        tmux new-session -s "$current_dir"
+        new_tmux
     else
-        found=$(print "$not_attached_sessions" | grep "$current_dir:")
+        found=$(print "$not_attached_sessions" | grep "$(basename "$(pwd)"):")
         
         if [[ -n "$found" ]]; then
             tmux attach -t "$(print "$found" | head -n 1 | cut -d ":" -f 1)"
