@@ -18,4 +18,5 @@ fi
 
   set -x
   ./apply.rb "$VSCODE_SETTING_FILE"
+  ./extensions.sh
 )
