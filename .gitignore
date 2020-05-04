@@ -1,7 +1,5 @@
-# for emacs
-*~
-\#*
-.\#*
+# for vscode
+.vscode
 
 # mac
 .DS_Store
@@ -13,10 +11,6 @@
 # ruby
 .ruby-version
 .ruby-gemset
-.bundle
-
-.editorconfig
-.yas-compiled-snippets.el
 
 # secret
 .envrc
