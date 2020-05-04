@@ -43,5 +43,5 @@
   /* others */
   // aws
   "aws.samcli.location": "/usr/local/bin/sam",
-  "aws.profile": "profile:circleci-billing"
+  "aws.telemetry": false
 }
