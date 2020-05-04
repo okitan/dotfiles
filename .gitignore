@@ -1,8 +1,3 @@
-# for emacs
-*~
-\#*
-.\#*
-
 # for vscode
 .vscode
 
@@ -16,10 +11,6 @@
 # ruby
 .ruby-version
 .ruby-gemset
-.bundle
-
-.editorconfig
-.yas-compiled-snippets.el
 
 # secret
 .envrc
