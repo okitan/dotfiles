@@ -25,6 +25,6 @@ _tmux_session_name() {
   fi
 }
 
-if respond_to tmux && [[ -z "$TMUX" ]]; then
+if type tmux >/dev/null && [[ -z "$TMUX" ]]; then
   auto_tmux
 fi

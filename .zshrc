@@ -24,19 +24,11 @@ load_zshrc() {
   [[ -f $1 ]] && ! [[ -e $1.orz ]] && source "$1"
 }
 
-source_if_exist() {
-  [[ -f $1 ]] && source "$1"
-}
-
-respond_to() {
-  [[ $(type "$1") != "$1 not found" ]]
-}
-
 # load plugins
 for file in "${0%/*}"/zsh/*.sh; do
   load_zshrc "$file"
 done
 
 # local settings
-source_if_exist ~/.zshrc.secret
-source_if_exist ~/dotfiles/.zshrc.local
+[[ -f ~/.zshrc.secret ]] && source ~/.zshrc.secret
+[[ -f ~/dotfiles/.zshrc.local ]] && srouce ~/dotfiles/.zshrc.local

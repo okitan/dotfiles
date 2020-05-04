@@ -1,3 +1,4 @@
 eval "$(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)"
 
-source_if_exist ~/perl5/perlbrew/etc/bashrc
+# shellcheck source=/dev/null
+[[ -f ~/perl5/perlbrew/etc/bashrc ]] && source ~/perl5/perlbrew/etc/bashrc
