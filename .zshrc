@@ -19,10 +19,23 @@ setopt hist_reduce_blanks
 setopt share_history
 
 # FUNCTIONS
-source ~/dotfiles/zsh/functions
+## load each zsh. each zshrc can be disabled by touching $file.orz
+load_zshrc() {
+  [[ -f $1 ]] && ! [[ -e $1.orz ]] && source "$1"
+}
 
-# FIXME: use for
-eval "`find ${0%/*}/zsh -name "*.sh" | sort | sed "s/^/load_zshrc /g"`"
+source_if_exist() {
+  [[ -f $1 ]] && source "$1"
+}
+
+respond_to() {
+  [[ $(type "$1") != "$1 not found" ]]
+}
+
+# load plugins
+for file in "${0%/*}"/zsh/*.sh; do
+  load_zshrc "$file"
+done
 
 # local settings
 source_if_exist ~/.zshrc.secret
