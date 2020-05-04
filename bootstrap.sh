@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 set -eu
 
@@ -9,18 +9,26 @@ set -eu
 
   # install self
   dir=~/dotfiles
-  (
-    set -x
-    [[ -d $dir ]] || git clone git@github.com:okitan/dotfiles.git
-  )
-
-  # override dotfiles
-  targets=".commit_template .gitconfig .gitignore .tmux.conf .vimrc"
-  for target in $targets; do
+  if [[ ! -d $dir ]]; then
     (
       set -x
-      [[ -e "$target" && (! -L "$target") ]] && mv "$target"{,.bak}
-      ln -sf "$dir"/"$target" ~
+      git clone git@github.com:okitan/dotfiles.git
+    )
+  fi
+
+  # override dotfiles
+  targets=(.commit_template .gitconfig .gitignore .tmux.conf .vimrc)
+  for target in "${targets[@]}"; do
+    # backup
+    if [[ -d ~/"$target" && (! -L ~/"$target") ]]; then
+      (
+        set -x
+        mv ~/"$target"{,.bak}
+      )
+    fi
+    (
+      set -x
+      ln -sf "$dir/$target" ~
     )
   done
 
@@ -37,16 +45,16 @@ set -eu
 
   # after installing oh-my-zsh inject local .zshrc
   line_to_insert="[[ -e ~/dotfiles/.zshrc ]] && source ~/dotfiles/.zshrc"
-  (
-    set -x
-    if ! grep "$line_to_insert" .zshrc >/dev/null; then
-      cat <<__EOF__ >>.zshrc
+  if ! grep "$line_to_insert" .zshrc >/dev/null; then
+    (
+      set -x
+      cat <<__EOF__ | tee -a .zshrc >/dev/null
 
 # load https://github.com/okitan/dotfiles
 $line_to_insert
 __EOF__
-    fi
-  )
+    )
+  fi
 )
 
 # further announcement
