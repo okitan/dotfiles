@@ -4,7 +4,7 @@ set -eu
 
 (
   set -x
-  # brew cask install visual-studio-code --appdir=/Applications
+  brew cask install visual-studio-code --appdir=/Applications
 )
 
 (
