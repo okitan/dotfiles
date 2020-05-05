@@ -3,13 +3,21 @@
 set -eu
 
 # do under osx directory
-(cd "$(dirname "$0")" || (echo "cd fails" && exit 127)
-  echo "Now I'm on $(pwd)"
+dir=$(dirname "$0")
+(
+  set -x
 
-  # setup plist
-  ./init.sh
+  # install xcode first
+  xcode-select --install || true
 
   # install homebrew
-  homebrew/bootstrap.sh
-  homebrew/common.sh
+  "$dir/homebrew/bootstrap.sh"
+  "$dir/homebrew/common.sh"
 )
+
+for file in "${0%/*}"/bootstrap/*.sh; do
+  (
+    set -x
+    $file
+  )
+done
