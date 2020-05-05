@@ -16,7 +16,7 @@ dir=$(dirname "$0")
 )
 
 # TODO: karabiner/bootstrap.sh should be */bootstrap.sh
-for file in "${0%/*}"/{bootstrap/*.sh,karabiner/bootstrap.sh}; do
+for file in "${0%/*}"/bootstrap/*.sh; do
   (
     set -x
     echo $file

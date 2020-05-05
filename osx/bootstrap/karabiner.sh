@@ -20,5 +20,5 @@ fi
   cd "$dir" || (echo "cd fails" && exit 127)
 
   set -x
-  ln -sf "$(pwd)/karabiner.json" ~/.config/karabiner
+  ln -sf "$(pwd)/../karabiner.json" ~/.config/karabiner
 )
