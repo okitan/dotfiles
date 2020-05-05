@@ -10,14 +10,15 @@ dir=$(dirname "$0")
   # install xcode first
   xcode-select --install || true
 
-  # install homebrew
+  # TODO: remove later
   "$dir/homebrew/bootstrap.sh"
   "$dir/homebrew/common.sh"
 )
 
-for file in "${0%/*}"/bootstrap/*.sh; do
+# TODO: karabiner/bootstrap.sh should be */bootstrap.sh
+for file in "${0%/*}"/{bootstrap/*.sh,karabiner/bootstrap.sh}; do
   (
     set -x
-    $file
+    echo $file
   )
 done
