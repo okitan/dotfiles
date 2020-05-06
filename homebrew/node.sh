@@ -2,11 +2,13 @@
 
 set -eu
 
+dir=$(dirname "$0")
 if ! type brew >/dev/null; then
   "$dir/../bootstrap/homebrew.sh"
 fi
 
-packages=(ag awk curl direnv gpg source-highlight tmux tree wget)
+# separate because node is big
+packages=(node)
 (
   set -x
   brew install "${packages[@]}" || brew upgrade "${packages[@]}"

@@ -6,9 +6,10 @@ if ! type brew >/dev/null; then
   "$dir/../bootstrap/homebrew.sh"
 fi
 
+packages=(zsh)
 (
   set -x
-  brew install zsh || brew upgrade zsh
+  brew install "${packages[@]}" || brew upgrade "${packages[@]}"
 )
 
 # chsh

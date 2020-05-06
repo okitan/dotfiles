@@ -7,9 +7,10 @@ if ! type brew >/dev/null; then
   "$dir/../bootstrap/homebrew.sh"
 fi
 
+packages=(kubernetes-cli)
 (
   set -x
-  brew install kubernetes-cli || brew upgrade kubernetes-cli
+  brew install "${packages[@]}" || brew upgrade "${packages[@]}"
 )
 
 # TODO: with gcp
