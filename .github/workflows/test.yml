@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  push: {}
+
+jobs:
+  shellckeck:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: 'Run shellcheck'
+      uses: 'bewuethr/shellcheck-action@v2'
