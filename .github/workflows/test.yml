@@ -13,4 +13,4 @@ jobs:
         uses: docker://koalaman/shellcheck-alpine:stable
         with:
           entrypoint: /bin/shellcheck
-          args: -s bash **/*.sh
+          args: -s bash /github/workspace/**/*.sh
