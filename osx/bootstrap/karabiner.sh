@@ -3,11 +3,8 @@
 set -eu
 
 dir=$(dirname "$0")
-if [[ ! -x /usr/local/bin/brew ]]; then
-  (
-    set -x
-    "$dir/../../bootstrap/homebrew.sh"
-  )
+if ! type brew >/dev/null; then
+  "$dir/../bootstrap/homebrew.sh"
 fi
 
 (

@@ -1,9 +1,0 @@
-# brew install or upgrade
-function brew_install_or_upgrade {
-  IFS=' '
-  module_with_options=`echo $*`
-
-  if ! brew install $module_with_options; then
-    brew upgrade $module_with_options
-  fi
-}

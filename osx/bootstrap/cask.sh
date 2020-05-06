@@ -3,16 +3,13 @@
 set -eu
 
 dir=$(dirname "$0")
-if [[ ! -x /usr/local/bin/brew ]]; then
-  (
-    set -x
-    "$dir/../../bootstrap/homebrew.sh"
-  )
+if ! type brew >/dev/null; then
+  "$dir/../bootstrap/homebrew.sh"
 fi
 
 # dropbox is banned
-# karabiner-element and visual-studio-code is installed in each script
-packages=(docker franz google-chrome google-cloud-sdk google-japanese-ime iterm2)
+# google-cloud-sdk, karabiner-element and visual-studio-code is installed in each script
+packages=(docker franz google-chrome google-japanese-ime iterm2 slack)
 for pkg in "${packages[@]}"; do
   (
     set -x
