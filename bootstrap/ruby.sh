@@ -26,7 +26,7 @@ fi
 
 # link rc
 (
-  cd "$dir" || (echo "cd failed" && exit 127)
+  cd "$dir"/../ruby || (echo "cd failed" && exit 127)
 
   pwd=$(pwd)
   targets=(.bundle .gemrc .pryrc .rspec .rvmrc)
