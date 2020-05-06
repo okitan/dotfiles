@@ -10,12 +10,10 @@ fi
 # dropbox is banned
 # google-cloud-sdk, karabiner-element and visual-studio-code is installed in each script
 packages=(docker franz google-chrome google-japanese-ime iterm2 slack)
-for pkg in "${packages[@]}"; do
-  (
-    set -x
-    brew cask install $pkg --appdir=/Applications
-  )
-done
+(
+  set -x
+  brew cask install "${packages[@]}" --appdir=/Applications
+)
 
 cat <<__EOF__
 * docker
