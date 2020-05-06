@@ -6,8 +6,12 @@ if [[ "$(uname)" != "Darwin" ]]; then
   exit
 fi
 
-dir=$(dirname "$0")
-(
-  set -x
-  "$dir/../osx/bootstrap.sh"
-)
+# install xcode first
+xcode-select --install || true
+
+for file in "${0%/*}"/../osx/*.sh; do
+  (
+    set -x
+    $file
+  )
+done
