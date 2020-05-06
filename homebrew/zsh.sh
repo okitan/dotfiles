@@ -2,6 +2,7 @@
 
 set -eu
 
+dir=$(dirname "$0")
 if ! type brew >/dev/null; then
   "$dir/../bootstrap/homebrew.sh"
 fi
@@ -14,7 +15,7 @@ packages=(zsh)
 
 # chsh
 shell=/usr/local/bin/zsh
-if [[ "$SHELL" != $shell ]]; then
+if [[ "$SHELL" != "$shell" ]]; then
   if ! grep $shell /etc/shells >/dev/null; then
     (
       set -x

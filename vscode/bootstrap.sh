@@ -2,7 +2,6 @@
 
 set -eu
 
-VSCODE_SETTING_DIR=$1
 VSCODE_SETTING_FILE=$1/settings.json
 
 # make backup
