@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: 'Run shellcheck'
-      uses: 'bewuethr/shellcheck-action@v2'
+      - uses: actions/checkout@v2
+      - name: "Run shellcheck"
+        uses: docker://koalaman/shellcheck-alpine:stable
+        with:
+          args: -s bash **/*.sh
