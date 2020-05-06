@@ -21,14 +21,13 @@ cat <<__EOF__
 * docker
   * TODO:
 * dropbox
-  * run, signin and choose which folders to sync
 * google-chrome
   * run and make it default browser
-* google-cloud-sdk
-  * noop
 * google-japanese-ime
   * run ConfigDialog from LaunchPad and reboot
   * open IME Configuration screen and add it
 * iterm2
+  * TODO:
+* slack
   * TODO:
 __EOF__
