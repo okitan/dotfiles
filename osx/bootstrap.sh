@@ -15,7 +15,6 @@ dir=$(dirname "$0")
   "$dir/homebrew/common.sh"
 )
 
-# TODO: karabiner/bootstrap.sh should be */bootstrap.sh
 for file in "${0%/*}"/bootstrap/*.sh; do
   (
     set -x

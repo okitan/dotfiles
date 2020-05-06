@@ -12,13 +12,10 @@ fi
 
 (
   set -x
-
-  brew cask install karabiner-elements --appdir=/Applications
+  brew cask install visual-studio-code --appdir=/Applications
 )
 
 (
-  cd "$dir" || (echo "cd fails" && exit 127)
-
   set -x
-  ln -sf "$(pwd)/../karabiner.json" ~/.config/karabiner
+  "$dir/../../vscode/bootstrap.sh" "$HOME/Library/Application Support/Code/User"
 )
