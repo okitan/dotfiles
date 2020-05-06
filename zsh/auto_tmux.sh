@@ -1,3 +1,8 @@
+if ! type tmux >/dev/null; then
+  echo "You need brew install tmux"
+  return
+fi
+
 auto_tmux() {
   not_attached_sessions=$(tmux ls 2>/dev/null | grep -v attached)
   if [[ -z "$not_attached_sessions" ]]; then
@@ -25,6 +30,6 @@ _tmux_session_name() {
   fi
 }
 
-if type tmux >/dev/null && [[ -z "$TMUX" ]]; then
+if [[ -z "$TMUX" ]]; then
   auto_tmux
 fi
