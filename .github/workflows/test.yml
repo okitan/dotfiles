@@ -12,5 +12,5 @@ jobs:
       - name: "Run shellcheck"
         uses: docker://koalaman/shellcheck-alpine:stable
         with:
-          entrypoint: /bin/shellcheck
-          args: -s bash /github/workspace/**/*.sh
+          entrypoint: /bin/sh
+          args: -c "/bin/shellcheck -s bash **/*.sh"
