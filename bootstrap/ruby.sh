@@ -29,7 +29,11 @@ fi
   cd "$dir"/../ruby || (echo "cd failed" && exit 127)
 
   pwd=$(pwd)
-  targets=(.bundle .gemrc .pryrc .rspec .rvmrc)
+  (
+    set -x
+    mkdir -p ~/.bundle
+  )
+  targets=(.bundle/config .gemrc .pryrc .rspec .rvmrc)
   for target in "${targets[@]}"; do
     # backup
     if [[ -d ~/"$target" && (! -L ~/"$target") ]]; then
@@ -40,7 +44,7 @@ fi
     fi
     (
       set -x
-      ln -sf "$pwd/$target" ~
+      ln -sf "$pwd/$target" ~/"$target"
     )
   done
 )
