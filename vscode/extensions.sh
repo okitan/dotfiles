@@ -1,8 +1,10 @@
 code --install-extension amazonwebservices.aws-toolkit-vscode
 code --install-extension aws-scripting-guy.cform
 code --install-extension axetroy.vscode-auto-schema
+code --install-extension denoland.vscode-deno
 code --install-extension esbenp.prettier-vscode
 code --install-extension foxundermoon.shell-format
+code --install-extension hashicorp.terraform
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension OmarTawfik.github-actions-vscode
 code --install-extension Orta.vscode-jest
