@@ -9,7 +9,7 @@ fi
 
 # dropbox is banned
 # google-cloud-sdk, karabiner-element and visual-studio-code is installed in each script
-packages=(docker franz google-chrome google-japanese-ime iterm2 slack)
+packages=(docker franz google-chrome google-japanese-ime iterm2 notion slack)
 (
   set -x
   brew cask install "${packages[@]}" --appdir=/Applications
@@ -26,6 +26,6 @@ cat <<__EOF__
   * open IME Configuration screen and add it
 * iterm2
   * TODO:
+* notion
 * slack
-  * TODO:
 __EOF__

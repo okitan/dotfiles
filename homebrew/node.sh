@@ -8,7 +8,7 @@ if ! type brew >/dev/null; then
 fi
 
 # separate because node is big
-packages=(node)
+packages=(node deno)
 (
   set -x
   brew install "${packages[@]}" || brew upgrade "${packages[@]}"
