@@ -6,8 +6,7 @@ if [[ "$(uname)" != "Darwin" ]]; then
   exit
 fi
 
-# install xcode first
-xcode-select --install || true
+# Note: git should be installed by xcode-select --install
 
 for file in "${0%/*}"/../osx/*.sh; do
   (

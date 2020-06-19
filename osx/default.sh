@@ -2,6 +2,9 @@
 
 set -eux
 
+## general
+defaults write NSGlobalDomain AppleAccentColr -int 6
+
 ## spotlight
 # TODO:
 

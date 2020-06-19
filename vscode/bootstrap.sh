@@ -16,6 +16,7 @@ fi
   cd "$(dirname "$0")" || (echo "cd fails" && exit 127)
 
   set -x
+  mkdir -p "$1"
   ./apply.rb "$VSCODE_SETTING_FILE"
   ./extensions.sh
 )

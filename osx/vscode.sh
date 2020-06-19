@@ -14,5 +14,5 @@ fi
 
 (
   set -x
-  "$dir/../../vscode/bootstrap.sh" "$HOME/Library/Application Support/Code/User"
+  "$dir/../vscode/bootstrap.sh" "$HOME/Library/Application Support/Code/User"
 )
