@@ -12,8 +12,9 @@
 	co = checkout
 	ci = commit
 	s = status
+	sw = switch
 
-	master = checkout master
+	master = switch master
 [rebase]
 	stat = true
 [push]
