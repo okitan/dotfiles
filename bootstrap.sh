@@ -28,7 +28,7 @@ for target in "${targets[@]}"; do
 done
 
 # exec bootstrap
-for file in "${0%/*}"/bootstrap/*.sh; do
+for file in "${dir}"/bootstrap/*.sh; do
   (
     set -x
     $file
