@@ -16,14 +16,14 @@ packages=(zsh)
 # chsh
 shell=$(brew --prefix)/bin/zsh
 if [[ "$SHELL" != "$shell" ]]; then
-  if ! grep $shell /etc/shells >/dev/null; then
+  if ! grep "$shell" /etc/shells >/dev/null; then
     (
       set -x
-      echo $shell | sudo tee -a /etc/shells
+      echo "$shell" | sudo tee -a /etc/shells
     )
   fi
   (
     set -x
-    chsh -s $shell
+    chsh -s "$shell"
   )
 fi
