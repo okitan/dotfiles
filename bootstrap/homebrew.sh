@@ -2,6 +2,11 @@
 
 set -eu
 
+linuxbrew="/home/linuxbrew/.linuxbrew/bin"
+if [[ "$(uname)" == "Linux" ]] && [[ "$PATH" != *"$linuxbrew"* ]]; then
+  export PATH="$linuxbrew:$PATH"
+fi
+
 if ! type brew >/dev/null; then
   (
     set -x

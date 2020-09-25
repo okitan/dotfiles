@@ -13,7 +13,8 @@ fi
 # configure zshrc derived from oh-my-zsh
 (
   set -x
-  sed -i "" -e "s/^plugins=.*/plugins=\\(brew cpanm gem git github osx perl rake ruby rvm\\)/" ~/.zshrc
+  # FIXME: the difference of sed between gnu and bsd are really fuck
+  sed -i "" -e "s/^plugins=.*/plugins=\\(brew gem git github osx rake ruby rvm\\)/" ~/.zshrc
 )
 
 # inject local .zshrc
