@@ -5,6 +5,7 @@
 	path = .gitconfig.local
 [core]
 	excludesfile = ~/.gitignore
+	pager = delta
 [color]
 	ui = true
 [alias]
@@ -13,19 +14,25 @@
 	ci = commit
 	s = status
 	sw = switch
-
-	master = switch master
 [rebase]
 	stat = true
 [push]
 	set-upstream = true
-[pager]
-	log  = diff-highlight | less
-	show = diff-highlight | less
-	diff = diff-highlight | less
 [fetch]
 	prune = true
 [diff]
 	compactionHeuristic = true
 [pull]
 	rebase = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    features = line-numbers decorations
+    whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none

@@ -7,7 +7,7 @@ if ! type brew >/dev/null; then
   "$dir/../bootstrap/homebrew.sh"
 fi
 
-packages=(git tig hub)
+packages=(git git-delta tig hub)
 (
   set -x
   brew install "${packages[@]}" || brew upgrade "${packages[@]}"
