@@ -10,7 +10,7 @@ fi
 packages=(kubernetes-cli)
 (
   set -x
-  brew install "${packages[@]}" || brew upgrade "${packages[@]}"
+  brew install "${packages[@]}"
 )
 
 # TODO: with gcp

@@ -13,7 +13,7 @@ if ! type rvm >/dev/null; then
 
     (
       set -x
-      brew install gnupg || brew upgrade gnupg
+      brew install gnupg
     )
   fi
 

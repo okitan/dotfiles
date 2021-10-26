@@ -10,5 +10,5 @@ fi
 packages=(ag awk curl direnv gnupg source-highlight tmux tree wget)
 (
   set -x
-  brew install "${packages[@]}" || brew upgrade "${packages[@]}"
+  brew install "${packages[@]}"
 )

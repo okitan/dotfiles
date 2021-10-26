@@ -11,5 +11,5 @@ fi
 packages=(node deno)
 (
   set -x
-  brew install "${packages[@]}" || brew upgrade "${packages[@]}"
+  brew install "${packages[@]}"
 )

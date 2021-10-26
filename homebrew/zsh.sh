@@ -10,7 +10,7 @@ fi
 packages=(zsh)
 (
   set -x
-  brew install "${packages[@]}" || brew upgrade "${packages[@]}"
+  brew install "${packages[@]}"
 )
 
 # chsh
