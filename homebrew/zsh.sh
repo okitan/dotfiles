@@ -14,7 +14,7 @@ packages=(zsh)
 )
 
 # chsh
-shell=/usr/local/bin/zsh
+shell=$(brew --prefix)/bin/zsh
 if [[ "$SHELL" != "$shell" ]]; then
   if ! grep $shell /etc/shells >/dev/null; then
     (
