@@ -9,7 +9,7 @@ fi
 
 (
   set -x
-  brew install visual-studio-code --appdir=/Applications
+  brew install visual-studio-code
 )
 
 (

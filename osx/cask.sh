@@ -14,7 +14,7 @@ for package in "${packages[@]}"; do
   if [[ ! -d "/Applications/${package}.app" ]]; then
     (
       set -x
-      brew install "${package}" --appdir=/Applications
+      brew install "${package}"
     )
   fi
 done
