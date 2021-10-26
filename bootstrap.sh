@@ -30,9 +30,9 @@ done
 # setup homebrew
 (
   set -x
-  ~/dotfiles/bootstrap/homebrew.sh
-  source ~/dotfiles/zsh/homebrew.sh
+  "$dir"/bootstrap/homebrew.sh
 )
+source "$dir"/zsh/homebrew.sh
 
 # exec bootstrap
 for file in "${dir}"/bootstrap/*.sh; do

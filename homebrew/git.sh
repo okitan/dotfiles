@@ -4,7 +4,11 @@ set -eu
 
 dir=$(dirname "$0")
 if ! type brew >/dev/null; then
-  "$dir/../bootstrap/homebrew.sh"
+  (
+    set -x
+    "$dir"/../bootstrap/homebrew.sh
+  )
+  source "$dir"/../zsh/bootstrap.sh
 fi
 
 packages=(git git-delta tig hub)
