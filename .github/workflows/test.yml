@@ -13,4 +13,4 @@ jobs:
         uses: docker://koalaman/shellcheck-alpine:stable
         with:
           entrypoint: /bin/sh
-          args: -c "/bin/shellcheck -s bash **/*.sh"
+          args: -c "/bin/shellcheck -x -P SCRIPTDIR -s bash **/*.sh"

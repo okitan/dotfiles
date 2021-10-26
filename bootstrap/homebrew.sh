@@ -2,8 +2,9 @@
 
 set -eu
 
+dir=$(dirname "$0")
 if ! type load_homebrew >/dev/null; then
-  source "${0%/*}"/../zsh/homebrew.sh
+  source "$dir"/../zsh/homebrew.sh
 fi
 
 if ! type brew >/dev/null; then
@@ -15,7 +16,7 @@ if ! type brew >/dev/null; then
   # load PATH
   load_homebrew
 
-  for file in "${0%/*}"/../homebrew/*.sh; do
+  for file in "$dir"/../homebrew/*.sh; do
     (
       set -x
       $file

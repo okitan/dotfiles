@@ -12,8 +12,7 @@ if ! type brew >/dev/null; then
     set -x
     "$dir"/../bootstrap/homebrew.sh
   )
-  source "$dir"/../zsh/bootstrap.sh
-
+  load_homebrew
 fi
 
 # separate because node is big
