@@ -3,6 +3,10 @@
 set -eu
 
 dir=$(dirname "$0")
+if ! type load_homebrew >/dev/null; then
+  source "$dir"/../zsh/homebrew.sh
+fi
+
 if ! type brew >/dev/null; then
   (
     set -x
