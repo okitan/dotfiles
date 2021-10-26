@@ -27,6 +27,13 @@ for target in "${targets[@]}"; do
   )
 done
 
+# setup homebrew
+(
+  set -x
+  ~/dotfiles/bootstrap/homebrew.sh
+  source ~/dotfiles/zsh/homebrew.sh
+)
+
 # exec bootstrap
 for file in "${dir}"/bootstrap/*.sh; do
   (
