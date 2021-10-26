@@ -10,7 +10,7 @@ fi
 (
   set -x
 
-  brew cask install karabiner-elements --appdir=/Applications
+  brew install karabiner-elements --appdir=/Applications
 )
 
 (

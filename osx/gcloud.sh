@@ -10,7 +10,7 @@ fi
 (
   set -x
 
-  brew cask install google-cloud-sdk
+  brew install google-cloud-sdk
 )
 
 if [[ ! -s ~/.config/gcloud/access_tokens.db ]]; then
