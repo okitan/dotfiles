@@ -15,15 +15,10 @@ if ! type brew >/dev/null; then
   load_homebrew
 fi
 
-(
-  set -x
-
-  brew install --cask google-cloud-sdk
-)
-
-if [[ ! -s ~/.config/gcloud/access_tokens.db ]]; then
+# google-chrome may be installed manually
+if [[ ! -d "/Applications/Google Chrome.app" ]]; then
   (
-    set -e
-    gcloud auth login
+    set -x
+    brew install --cask google-chrome
   )
 fi

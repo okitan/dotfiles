@@ -3,13 +3,21 @@
 set -eu
 
 dir=$(dirname "$0")
+if ! type load_homebrew >/dev/null; then
+  source "$dir"/../zsh/homebrew.sh
+fi
+
 if ! type brew >/dev/null; then
-  "$dir/../bootstrap/homebrew.sh"
+  (
+    set -x
+    "$dir"/../bootstrap/homebrew.sh
+  )
+  load_homebrew
 fi
 
 (
   set -x
-  brew install visual-studio-code
+  brew install --cask visual-studio-code
 )
 
 (
