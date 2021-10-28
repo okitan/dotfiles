@@ -17,8 +17,8 @@ fi
 
 # dropbox is banned
 # google-chrome, slack may be installed manually
-# google-cloud-sdk, karabiner-element and visual-studio-code is installed in each script
-packages=(docker franz google-japanese-ime)
+# google-cloud-sdk and karabiner-element is installed in each script
+packages=(docker franz google-japanese-ime visual-studio-code)
 (
   set -x
   brew install --cask "${packages[@]}"
