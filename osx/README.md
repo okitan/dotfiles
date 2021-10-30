@@ -2,6 +2,10 @@
 
 ## Setup Manually
 
+###
+
+See: `cat osx/defaults.sh | grep -B 1 TODO:`
+
 ### Chrome
 
 - Google Chrome をデフォルトブラウザに設定する
