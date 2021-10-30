@@ -24,6 +24,8 @@ load_zshrc() {
   [[ -f $1 ]] && ! [[ -e $1.orz ]] && source "$1"
 }
 
+# homebrew should be loaded first
+load_zshrc "${0%/*}"/zsh/homebrew.sh
 # load plugins
 for file in "${0%/*}"/zsh/*.sh; do
   load_zshrc "$file"
