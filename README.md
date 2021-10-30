@@ -7,26 +7,14 @@
 curl https://raw.githubusercontent.com/okitan/dotfiles/master/bootstrap.sh | bash
 ```
 
-The script includes
+The script includes:
 
-- links dotfiles
-- install oh-my-zsh
+- installing homebrew
+- linking dotfiles
+- installing oh-my-zsh
 
 Enjoy!
 
-# env specific setup
-
-## osx
+### manual setup
 
 See: [osx/README.md](./osx)
-
-# Options
-
-```console
-$ ${GROUP}/bootstrap.sh
-```
-
-GROUP are:
-
-- atom
-- ruby

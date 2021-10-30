@@ -1,0 +1,285 @@
+{
+    "Apple Global Domain" =     {
+        PKSecureElementAvailableFlagsByHost = 3;
+        "com.apple.ColorSync.Devices" =         {
+        };
+        "com.apple.trackpad.enableSecondaryClick" = 1;
+        "com.apple.trackpad.fiveFingerPinchSwipeGesture" = 2;
+        "com.apple.trackpad.fourFingerHorizSwipeGesture" = 2;
+        "com.apple.trackpad.fourFingerPinchSwipeGesture" = 2;
+        "com.apple.trackpad.fourFingerVertSwipeGesture" = 2;
+        "com.apple.trackpad.momentumScroll" = 1;
+        "com.apple.trackpad.pinchGesture" = 1;
+        "com.apple.trackpad.rotateGesture" = 1;
+        "com.apple.trackpad.scrollBehavior" = 2;
+        "com.apple.trackpad.threeFingerDragGesture" = 0;
+        "com.apple.trackpad.threeFingerHorizSwipeGesture" = 2;
+        "com.apple.trackpad.threeFingerTapGesture" = 0;
+        "com.apple.trackpad.threeFingerVertSwipeGesture" = 2;
+        "com.apple.trackpad.twoFingerDoubleTapGesture" = 1;
+        "com.apple.trackpad.twoFingerFromRightEdgeSwipeGesture" = 3;
+        "com.apple.trackpad.version" = 5;
+    };
+    "com.apple.AOSKit.RegInfo" =     {
+        lastComputerName = "58620-MAC";
+        lastRegAllTime = "2021\\U5e7410\\U670828\\U65e5 \\U6728\\U66dc\\U65e5 14\\U664224\\U520646\\U79d2 \\U65e5\\U672c\\U6a19\\U6e96\\U6642";
+        ttlSeconds = 430797;
+    };
+    "com.apple.AOSPushRelay.TopicInfo" =     {
+        production = 2;
+    };
+    "com.apple.Bluetooth" =     {
+        BluetoothVersionNumber = 3;
+        IDSPairedDevices =         (
+            "ec-2c-e2-a5-c7-b5"
+        );
+        RecentDevices =         {
+            "1c-52-16-4f-d6-96" = "2020-11-06 04:05:29 +0000";
+            "20-74-cf-d5-80-ad" = "2021-10-30 05:09:20 +0000";
+            "20-74-cf-e2-77-76" = "2021-08-20 05:53:54 +0000";
+            "ec-2c-e2-a5-c7-b5" = "2021-10-24 04:34:48 +0000";
+        };
+    };
+    "com.apple.ManagedClient" =     {
+        MigratedShareKitPayloads = 1;
+    };
+    "com.apple.Music" =     {
+        "pref:200:Machine Preferences" = {length = 4952, bytes = 0x00000001 00000000 00000000 00000000 ... 61a8cecc 69e14472 };
+        "watched-folder-url" = "file:///Users/okita.kunio/Music/Music/Media.localized/Automatically%20Add%20to%20Music.localized/";
+    };
+    "com.apple.QuickLookDaemon" =     {
+        "Last Mod Date For /Library/QuickLook" = 1578726327;
+        "Last Mod Date For /System/Library/QuickLook" = 1583233379;
+        "Last Mod Date For ~/Library/QuickLook" = 0;
+    };
+    "com.apple.commcenter.csidata" =     {
+        BootTime = 0x617ad10e;
+        CommCenterStartsThisBoot = 0x1;
+        VoWiFiLocationEvaluated = 0x1;
+        WifiCallingLocationAuthorizationStatus = 0x2;
+    };
+    "com.apple.configurationprofiles.user" =     {
+        LastCheckForExpiringProfiles = "2021-10-30 05:09:59 +0000";
+        "PollTimer_NextFireDate" = "2021-10-30 10:46:55 +0000";
+        "Workaround_22455316" = "2021-10-30 10:37:39 +0000";
+    };
+    "com.apple.dock" =     {
+        LaunchPadDBName = "E35B7337-7EEB-4287-B0D7-F6534B98A2F8";
+    };
+    "com.apple.finder" =     {
+    };
+    "com.apple.identityservicesd" =     {
+        CheckedDuplicatedUniqueID = 1;
+    };
+    "com.apple.imservice.SMS" =     {
+        Accounts =         {
+            "E01BFDD0-A2FA-4AB9-B67E-A52EAB39C09B" =             {
+                LoginAs = "E:";
+                canRelayMMS = 0;
+                canRelaySMS = 0;
+                isSMSRelayCapable = 0;
+            };
+        };
+        ActiveAccounts =         (
+            "E01BFDD0-A2FA-4AB9-B67E-A52EAB39C09B"
+        );
+        OnlineAccounts =         (
+            "E01BFDD0-A2FA-4AB9-B67E-A52EAB39C09B"
+        );
+        Status =         {
+            "E01BFDD0-A2FA-4AB9-B67E-A52EAB39C09B" =             {
+                FZPersonFirstName = Kunio;
+                FZPersonLastName = Okita;
+                FZPersonStatus = 4;
+            };
+        };
+    };
+    "com.apple.imservice.ids.FaceTime" =     {
+        Status =         {
+            "48E4C800-AB3F-4E6C-B47F-46E9DB5E9FE8" =             {
+                FZPersonFirstName = Kunio;
+                FZPersonLastName = Okita;
+                FZPersonStatus = 4;
+            };
+        };
+    };
+    "com.apple.imservice.ids.iMessage" =     {
+        Status =         {
+            "760C9870-9B1A-4F43-A2CC-FB87F5CA48FA" =             {
+                FZPersonStatus = 4;
+            };
+        };
+    };
+    "com.apple.loginwindow" =     {
+        TALAppsToRelaunchAtLogin =         (
+                        {
+                BackgroundState = 2;
+                BundleID = "com.apple.systempreferences";
+                Hide = 0;
+                Path = "/System/Applications/System Preferences.app";
+            },
+                        {
+                BackgroundState = 2;
+                BundleID = "com.google.chrome";
+                Hide = 0;
+                Path = "/Applications/Google Chrome.app";
+            },
+                        {
+                BackgroundState = 2;
+                BundleID = "com.microsoft.vscode";
+                Hide = 0;
+                Path = "/Applications/Visual Studio Code.app";
+            },
+                        {
+                BackgroundState = 2;
+                BundleID = "com.meetfranz.franz";
+                Hide = 0;
+                Path = "/Applications/Franz.app";
+            },
+                        {
+                BackgroundState = 2;
+                BundleID = "com.tinyspeck.slackmacgap";
+                Hide = 0;
+                Path = "/Applications/Slack.app";
+            },
+                        {
+                BackgroundState = 2;
+                BundleID = "com.apple.activitymonitor";
+                Hide = 0;
+                Path = "/System/Applications/Utilities/Activity Monitor.app";
+            },
+                        {
+                BackgroundState = 2;
+                BundleID = "com.apple.finder";
+                Hide = 0;
+                Path = "/System/Library/CoreServices/Finder.app";
+            }
+        );
+    };
+    "com.apple.networkConnect" =     {
+    };
+    "com.apple.notificationcenterui" =     {
+        doNotDisturb = 0;
+    };
+    "com.apple.screensaver" =     {
+        CleanExit = YES;
+        PrefsVersion = 100;
+        moduleDict =         {
+            moduleName = "Computer Name";
+            path = "/System/Library/Frameworks/ScreenSaver.framework/PlugIns/Computer Name.appex";
+            type = 0;
+        };
+        tokenRemovalAction = 0;
+    };
+    "com.apple.sharingd" =     {
+        AppleIDAccount = {length = 5706, bytes = 0x62706c69 73743030 d4010203 04050607 ... 00000000 00001500 };
+        AppleIDAgentMetaInfo = {length = 603, bytes = 0x62706c69 73743030 d4010203 04050607 ... 00000000 000001c1 };
+    };
+    "com.apple.systempreferences" =     {
+        "hwcheck-cache-com.apple.ClassroomSettings" = 1;
+        "hwcheck-cache-com.apple.preference.sidecar" = 0;
+        "hwcheck-cache-com.apple.preferences.configurationprofiles" = 0;
+        "hwcheck-cache-com.apple.preferences.password" = 0;
+        "hwcheck-cache-com.apple.preferences.wallet" = 0;
+    };
+    "com.apple.windowserver" =     {
+        DisplaySets =         (
+                        (
+                                {
+                    Active = 1;
+                    Depth = 8;
+                    DisplayID = 69734464;
+                    DisplayProductID = 41025;
+                    DisplaySerialNumber = 0;
+                    DisplayVendorID = 1552;
+                    ForceDeepMode = 0;
+                    Height = 1050;
+                    IODisplayLocation = "IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/IGPU@2/AppleIntelFramebuffer@0";
+                    IOFlags = 3;
+                    LimitsHeight = 2100;
+                    LimitsOriginX = 0;
+                    LimitsOriginY = 0;
+                    LimitsWidth = 3360;
+                    MirrorID = 0;
+                    Mirrored = 0;
+                    Mode =                     {
+                        BitsPerPixel = 32;
+                        BitsPerSample = 10;
+                        DepthFormat = 8;
+                        Height = 1050;
+                        IODisplayModeID = "-2147479550";
+                        IOFlags = 3;
+                        Mode = 3;
+                        PixelEncoding = "--RRRRRRRRRRGGGGGGGGGGBBBBBBBBBB";
+                        RefreshRate = 0;
+                        SamplesPerPixel = 3;
+                        UsableForDesktopGUI = 1;
+                        Width = 1680;
+                        kCGDisplayBytesPerRow = 13440;
+                        kCGDisplayHorizontalResolution = 298;
+                        kCGDisplayModeIsInterlaced = 0;
+                        kCGDisplayModeIsSafeForHardware = 1;
+                        kCGDisplayModeIsStretched = 0;
+                        kCGDisplayModeIsTelevisionOutput = 0;
+                        kCGDisplayModeIsUnavailable = 0;
+                        kCGDisplayModeSuitableForUI = 1;
+                        kCGDisplayPixelsHigh = 2100;
+                        kCGDisplayPixelsWide = 3360;
+                        kCGDisplayResolution = 2;
+                        kCGDisplayVerticalResolution = 298;
+                    };
+                    OriginX = 0;
+                    OriginY = 0;
+                    PixelEncoding = "--RRRRRRRRRRGGGGGGGGGGBBBBBBBBBB";
+                    Resolution = 2;
+                    Unit = 0;
+                    UnmirroredHeight = 1050;
+                    UnmirroredLimitsHeight = 2100;
+                    UnmirroredLimitsOriginX = 0;
+                    UnmirroredLimitsOriginY = 0;
+                    UnmirroredLimitsWidth = 3360;
+                    UnmirroredMode =                     {
+                        BitsPerPixel = 32;
+                        BitsPerSample = 10;
+                        DepthFormat = 8;
+                        Height = 1050;
+                        IODisplayModeID = "-2147479550";
+                        IOFlags = 3;
+                        Mode = 3;
+                        PixelEncoding = "--RRRRRRRRRRGGGGGGGGGGBBBBBBBBBB";
+                        RefreshRate = 0;
+                        SamplesPerPixel = 3;
+                        UsableForDesktopGUI = 1;
+                        Width = 1680;
+                        kCGDisplayBytesPerRow = 13440;
+                        kCGDisplayHorizontalResolution = 298;
+                        kCGDisplayModeIsInterlaced = 0;
+                        kCGDisplayModeIsSafeForHardware = 1;
+                        kCGDisplayModeIsStretched = 0;
+                        kCGDisplayModeIsTelevisionOutput = 0;
+                        kCGDisplayModeIsUnavailable = 0;
+                        kCGDisplayModeSuitableForUI = 1;
+                        kCGDisplayPixelsHigh = 2100;
+                        kCGDisplayPixelsWide = 3360;
+                        kCGDisplayResolution = 2;
+                        kCGDisplayVerticalResolution = 298;
+                    };
+                    UnmirroredOriginX = 0;
+                    UnmirroredOriginY = 0;
+                    UnmirroredResolution = 2;
+                    UnmirroredWidth = 1680;
+                    Width = 1680;
+                }
+            )
+        );
+        account = 935;
+    };
+    "com.hnc.Discord.ShipIt" =     {
+    };
+    "com.meetfranz.franz.ShipIt" =     {
+    };
+    "com.microsoft.VSCode.ShipIt" =     {
+    };
+    "notion.id.ShipIt" =     {
+    };
+}
