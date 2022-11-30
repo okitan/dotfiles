@@ -89,6 +89,13 @@ defaults write .GlobalPreferences NSAutomaticQuoteSubstitutionEnabled -bool fals
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool false
 
+## その他のジェスチャ
+### ページ間をスワイプ
+# defaults write .GlobalPreferences AppleEnableSwipeNavigateWithScrolls -bool false
+# defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGesture -int 0
+# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 0
+# defaults write ~/Library/Preferences/ByHost/.GlobalPreferences com.apple.trackpad.threeFingerHorizSwipeGesture -int 1
+
 # マウス
 defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode -string "TwoButton"
 

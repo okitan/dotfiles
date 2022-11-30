@@ -13,7 +13,7 @@ fi
 # configure zshrc derived from oh-my-zsh
 (
   set -x
-  sed -i "" -e "s/^plugins=.*/plugins=\\(brew gem git github osx rake ruby rvm\\)/" ~/.zshrc
+  sed -i "" -e "s/^plugins=.*/plugins=\\(brew gem git github macos rake ruby rvm\\)/" ~/.zshrc
 )
 
 # inject local .zshrc

@@ -1,38 +1,41 @@
 [user]
-	name = okitan
-	email = okitakunio@gmail.com
+name = okitan
+email = okitakunio@gmail.com
 [include]
-	path = .gitconfig.local
+path = .gitconfig.local
 [core]
-	excludesfile = ~/.gitignore
-	pager = delta
+excludesfile = ~/.gitignore
+pager = delta
 [color]
-	ui = true
+ui = true
 [alias]
-	br = branch
-	co = checkout
-	ci = commit
-	s = status
-	sw = switch
+br = branch
+co = checkout
+ci = commit
+s = status
+sw = switch
 [rebase]
-	stat = true
+stat = true
 [push]
-	set-upstream = true
+set-upstream = true
 [fetch]
-	prune = true
+prune = true
 [diff]
-	compactionHeuristic = true
+compactionHeuristic = true
 [pull]
-	rebase = true
+rebase = true
 
 [interactive]
-    diffFilter = delta --color-only
+diffFilter = delta --color-only
 
 [delta]
-    features = line-numbers decorations
-    whitespace-error-style = 22 reverse
+features = line-numbers decorations
+whitespace-error-style = 22 reverse
 
 [delta "decorations"]
-    commit-decoration-style = bold yellow box ul
-    file-style = bold yellow ul
-    file-decoration-style = none
+commit-decoration-style = bold yellow box ul
+file-style = bold yellow ul
+file-decoration-style = none
+
+[url "git@github.dena.jp:"]
+insteadOf = https://github.dena.jp/
