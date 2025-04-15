@@ -30,6 +30,8 @@ defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter.plist Batter
 # TODO: メニューバーに表示しない
 
 # Mission Control
+defaults write com.apple.WindowManager GloballyEnabled -bool true
+defaults write com.apple.WindowManager GloballyEnabledEver -bool true
 
 # Siri
 
