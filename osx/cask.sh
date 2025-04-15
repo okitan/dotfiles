@@ -18,17 +18,18 @@ fi
 # dropbox is banned
 # google-chrome, slack may be installed manually
 # google-cloud-sdk and karabiner-element is installed in each script
-packages=(docker franz google-japanese-ime visual-studio-code)
+packages=(arc cursor google-japanese-ime rancher visual-studio-code)
 (
   set -x
   brew install --cask "${packages[@]}"
 )
 
 cat <<__EOF__
-* docker
-  * TODO:
-* franz
 * google-japanese-ime
   * run ConfigDialog from LaunchPad and reboot
   * open IME Configuration screen and add it
+* rancher
+  * open Rancher Desktop and set the following settings
+    * Kubernetes: disabled
+    * Container Engine: moby
 __EOF__
