@@ -2,8 +2,10 @@
 
 set -eu
 
-dir=$(dirname "$0")
+dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 if ! type load_homebrew >/dev/null; then
+  # shellcheck source=/dev/null
   source "$dir"/../zsh/homebrew.sh
 fi
 

@@ -32,6 +32,7 @@ done
   set -x
   "$dir"/bootstrap/homebrew.sh
 )
+# shellcheck source=/dev/null
 source "$dir"/zsh/homebrew.sh
 
 # exec bootstrap
