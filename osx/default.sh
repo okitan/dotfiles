@@ -14,7 +14,7 @@ defaults write .GlobalPreferences AppleInterfaceStyle -string "Dark"
 
 # Dockとメニューバー
 ## Dock
-defaults write com.apple.dock orientation -string "left"
+defaults write com.apple.dock orientation -string "bottom"
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock show-recents -bool false
 
