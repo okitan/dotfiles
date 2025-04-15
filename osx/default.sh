@@ -139,3 +139,7 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Down
 ##
 killall Dock
 killall SystemUIServer
+
+cat <<-EOF
+* システム設定 > ディスプレイ でスペースを拡大にする
+EOF
