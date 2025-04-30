@@ -93,10 +93,7 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightC
 
 ## その他のジェスチャ
 ### ページ間をスワイプ
-# defaults write .GlobalPreferences AppleEnableSwipeNavigateWithScrolls -bool false
-# defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGesture -int 0
-# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 0
-# defaults write ~/Library/Preferences/ByHost/.GlobalPreferences com.apple.trackpad.threeFingerHorizSwipeGesture -int 1
+defaults write .GlobalPreferences AppleEnableSwipeNavigateWithScrolls -bool false
 
 # マウス
 defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode -string "TwoButton"
