@@ -14,7 +14,7 @@ defaults write .GlobalPreferences AppleInterfaceStyle -string "Dark"
 
 # Dockとメニューバー
 ## Dock
-defaults write com.apple.dock orientation -string "left"
+defaults write com.apple.dock orientation -string "bottom"
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock show-recents -bool false
 
@@ -30,6 +30,8 @@ defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter.plist Batter
 # TODO: メニューバーに表示しない
 
 # Mission Control
+defaults write com.apple.WindowManager GloballyEnabled -bool true
+defaults write com.apple.WindowManager GloballyEnabledEver -bool true
 
 # Siri
 
@@ -91,10 +93,7 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightC
 
 ## その他のジェスチャ
 ### ページ間をスワイプ
-# defaults write .GlobalPreferences AppleEnableSwipeNavigateWithScrolls -bool false
-# defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGesture -int 0
-# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 0
-# defaults write ~/Library/Preferences/ByHost/.GlobalPreferences com.apple.trackpad.threeFingerHorizSwipeGesture -int 1
+defaults write .GlobalPreferences AppleEnableSwipeNavigateWithScrolls -bool false
 
 # マウス
 defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode -string "TwoButton"
@@ -137,3 +136,7 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Down
 ##
 killall Dock
 killall SystemUIServer
+
+cat <<-EOF
+* システム設定 > ディスプレイ でスペースを拡大にする
+EOF

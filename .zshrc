@@ -33,4 +33,4 @@ done
 
 # local settings
 [[ -f ~/.zshrc.secret ]] && source ~/.zshrc.secret
-[[ -f ~/dotfiles/.zshrc.local ]] && srouce ~/dotfiles/.zshrc.local
+[[ -f ~/dotfiles/.zshrc.local ]] && source ~/dotfiles/.zshrc.local

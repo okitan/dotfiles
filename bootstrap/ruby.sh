@@ -2,7 +2,21 @@
 
 set -eu
 
-dir=$(dirname "$0")
+dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+if ! type load_homebrew >/dev/null; then
+  # shellcheck source=/dev/null
+  source "$dir"/../zsh/homebrew.sh
+fi
+
+if ! type brew >/dev/null; then
+  (
+    set -x
+    "$dir"/../bootstrap/homebrew.sh
+  )
+  load_homebrew
+fi
+
 # install rvm
 if ! type rvm >/dev/null; then
   # install gpg to verify rvm installation package
