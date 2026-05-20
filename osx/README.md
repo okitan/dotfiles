@@ -6,6 +6,10 @@
 
 See: `cat osx/defaults.sh | grep -B 1 TODO:`
 
+## Audit
+
+- Compare current settings with `osx/default.sh`: `bash tools/osx_audit_default.sh`
+
 ### Chrome
 
 - Google Chrome をデフォルトブラウザに設定する
