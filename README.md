@@ -3,7 +3,6 @@
 ## setup
 
 ```bash
-# you need private key of github
 curl https://raw.githubusercontent.com/okitan/dotfiles/master/bootstrap.sh | bash
 ```
 

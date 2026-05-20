@@ -7,7 +7,7 @@ dir=~/dotfiles
 if [[ ! -d $dir ]]; then
   (
     set -x
-    git clone git@github.com:okitan/dotfiles.git $dir
+    git clone https://github.com/okitan/dotfiles.git $dir
   )
 fi
 
