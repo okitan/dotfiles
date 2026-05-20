@@ -34,6 +34,7 @@ done
 )
 # shellcheck source=/dev/null
 source "$dir"/zsh/homebrew.sh
+require_homebrew
 
 # exec bootstrap
 for file in "${dir}"/bootstrap/*.sh; do

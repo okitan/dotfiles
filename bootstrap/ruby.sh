@@ -10,11 +10,7 @@ if ! type load_homebrew >/dev/null; then
 fi
 
 if ! type brew >/dev/null; then
-  (
-    set -x
-    "$dir"/../bootstrap/homebrew.sh
-  )
-  load_homebrew
+  require_homebrew
 fi
 
 # install rvm
@@ -22,7 +18,7 @@ if ! type rvm >/dev/null; then
   # install gpg to verify rvm installation package
   if ! type gpg >/dev/null; then
     if ! type brew >/dev/null; then
-      "$dir/../bootstrap/homebrew.sh"
+      require_homebrew
     fi
 
     (

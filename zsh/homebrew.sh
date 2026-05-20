@@ -10,4 +10,21 @@ load_homebrew() {
   fi
 }
 
+require_homebrew() {
+  if type brew >/dev/null; then
+    return 0
+  fi
+
+  cat >&2 <<'__EOF__'
+Homebrew is required but not installed.
+
+Install it first:
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+Then rerun bootstrap:
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/okitan/dotfiles/master/bootstrap.sh)"
+__EOF__
+  return 1
+}
+
 load_homebrew

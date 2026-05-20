@@ -10,11 +10,7 @@ if ! type load_homebrew >/dev/null; then
 fi
 
 if ! type brew >/dev/null; then
-  (
-    set -x
-    "$dir"/../bootstrap/homebrew.sh
-  )
-  load_homebrew
+  require_homebrew
 fi
 
 packages=(zsh)
