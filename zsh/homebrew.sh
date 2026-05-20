@@ -1,13 +1,9 @@
 load_homebrew() {
-  if [[ -x /usr/local/bin/brew ]]; then
-    if ! echo "$PATH" | grep -q /usr/local/bin; then
-      eval "$(/usr/local/bin/brew shellenv)"
-    fi
+  if [[ -x /opt/homebrew/bin/brew ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
   else
-    if [[ -x /opt/homebrew/bin/brew ]]; then
-      if ! echo "$PATH" | grep -q /opt/homebrew/bin; then
-        eval "$(/opt/homebrew/bin/brew shellenv)"
-      fi
+    if [[ -x /usr/local/bin/brew ]]; then
+      eval "$(/usr/local/bin/brew shellenv)"
     else
       echo "no homebrew installed"
     fi

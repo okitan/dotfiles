@@ -6,6 +6,9 @@ path = .gitconfig.local
 [core]
 excludesfile = ~/.gitignore
 pager = delta
+[credential]
+helper = 
+helper = manager
 [color]
 ui = true
 [alias]
@@ -37,5 +40,5 @@ commit-decoration-style = bold yellow box ul
 file-style = bold yellow ul
 file-decoration-style = none
 
-[url "git@github.dena.jp:"]
-insteadOf = https://github.dena.jp/
+[url "https://okitan@github.com/okitan/"]
+    insteadOf = https://github.com/okitan/

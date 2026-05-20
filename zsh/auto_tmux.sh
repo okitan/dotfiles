@@ -29,7 +29,3 @@ _tmux_session_name() {
     basename "$(pwd)"
   fi
 }
-
-if [[ -z "$TMUX" ]]; then
-  auto_tmux
-fi
