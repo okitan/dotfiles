@@ -20,12 +20,5 @@ fi
 (
   set -x
 
-  brew install --cask google-cloud-sdk
+  brew install --cask gcloud-cli
 )
-
-if [[ ! -s ~/.config/gcloud/access_tokens.db ]]; then
-  (
-    set -e
-    gcloud auth login
-  )
-fi

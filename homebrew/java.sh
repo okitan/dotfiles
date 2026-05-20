@@ -17,9 +17,7 @@ if ! type brew >/dev/null; then
   load_homebrew
 fi
 
-# separate because node is big
-packages=(node@24 bun)
 (
   set -x
-  brew install "${packages[@]}"
+  brew install --cask temurin@21
 )

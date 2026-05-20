@@ -42,3 +42,5 @@ file-decoration-style = none
 
 [url "https://okitan@github.com/okitan/"]
     insteadOf = https://github.com/okitan/
+[url "https://kunio-okita_dena@github.com/ai-dena/"]
+    insteadOf = https://github.com/ai-dena/

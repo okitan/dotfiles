@@ -19,7 +19,7 @@ fi
 
 # dropbox is banned
 # google-chrome, slack may be installed manually
-# google-cloud-sdk and karabiner-element is installed in each script
+# gcloud-cli and karabiner-element is installed in each script
 packages=(arc cursor google-japanese-ime rancher visual-studio-code)
 (
   set -x
