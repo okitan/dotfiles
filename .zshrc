@@ -25,7 +25,7 @@ load_zshrc() {
 }
 
 # homebrew should be loaded first
-load_zshrc "${0%/*}"/zsh/homebrew.sh
+load_zshrc "${0%/*}"/lib/homebrew.sh
 # load plugins
 for file in "${0%/*}"/zsh/*.sh; do
   load_zshrc "$file"

@@ -1,20 +1,28 @@
 #!/bin/bash
 
-set -eu
+set -Eeu
 
 # install self
 dir=~/dotfiles
+
 if [[ ! -d $dir ]]; then
   (
     set -x
-    git clone https://github.com/okitan/dotfiles.git $dir
+    git clone https://github.com/okitan/dotfiles.git "$dir"
   )
 fi
 
+# shellcheck source=/dev/null
+source "$dir"/lib/bootstrap.sh
+bootstrap_setup_error_trap bootstrap.sh
+
 # override dotfiles
 targets=(.commit_template .gitconfig .gitignore .tmux.conf .vimrc)
+
+target_index=0
 for target in "${targets[@]}"; do
-  # backup
+  target_index=$((target_index + 1))
+
   if [[ -d ~/"$target" && (! -L ~/"$target") ]]; then
     (
       set -x
@@ -27,24 +35,28 @@ for target in "${targets[@]}"; do
   )
 done
 
-# setup homebrew
 (
   set -x
   bash "$dir"/bootstrap/homebrew.sh
 )
+
 # shellcheck source=/dev/null
-source "$dir"/zsh/homebrew.sh
+source "$dir"/lib/homebrew.sh
 require_homebrew
 
-# exec bootstrap
-for file in "${dir}"/bootstrap/*.sh; do
+for file in "$dir"/bootstrap/*.sh; do
+  case "$(basename "$file")" in
+    homebrew.sh)
+      continue
+      ;;
+  esac
+
   (
     set -x
     bash "$file"
   )
 done
 
-# further announcement
 cat <<__EOF__
 okitan/dotfiles setup complete
 

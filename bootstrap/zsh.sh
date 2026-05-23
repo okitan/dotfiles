@@ -1,6 +1,12 @@
 #!/bin/bash
 
-set -eu
+set -Eeu
+
+dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# shellcheck source=/dev/null
+source "$dir"/../lib/bootstrap.sh
+bootstrap_setup_error_trap zsh.sh
 
 # install oh-my-zsh
 if [[ ! -d ~/.oh-my-zsh ]]; then
