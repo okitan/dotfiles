@@ -30,7 +30,7 @@ done
 # setup homebrew
 (
   set -x
-  "$dir"/bootstrap/homebrew.sh
+  bash "$dir"/bootstrap/homebrew.sh
 )
 # shellcheck source=/dev/null
 source "$dir"/zsh/homebrew.sh
@@ -40,7 +40,7 @@ require_homebrew
 for file in "${dir}"/bootstrap/*.sh; do
   (
     set -x
-    $file
+    bash "$file"
   )
 done
 

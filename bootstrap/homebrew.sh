@@ -9,4 +9,10 @@ if ! type load_homebrew >/dev/null; then
   source "$dir"/../zsh/homebrew.sh
 fi
 
-require_homebrew
+for file in "$dir"/../homebrew/*.sh; do
+  (
+    set -x
+    bash "$file"
+  )
+done
+

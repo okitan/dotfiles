@@ -17,5 +17,6 @@ fi
 packages=(node@24 bun)
 (
   set -x
+  brew tap oven-sh/bun
   brew install "${packages[@]}"
 )

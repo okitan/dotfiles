@@ -19,10 +19,8 @@ fi
 packages=(arc cursor google-japanese-ime rancher visual-studio-code)
 (
   set -x
-  brew install --cask "${packages[@]}"
+  HOMEBREW_NO_INSTALL_UPGRADE=1 brew install --cask "${packages[@]}"
 )
-
-brew install --cask alacritty
 
 cat <<__EOF__
 * google-japanese-ime

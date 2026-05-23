@@ -16,7 +16,7 @@ fi
 (
   set -x
 
-  brew install --cask karabiner-elements
+  HOMEBREW_NO_INSTALL_UPGRADE=1 brew install --cask karabiner-elements
 )
 
 (
