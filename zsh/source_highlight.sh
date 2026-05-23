@@ -1,6 +1,6 @@
-if [[ -x /usr/local/bin/src-hilite-lesspipe.sh ]]; then
+if lesspipe_path="$(command -v src-hilite-lesspipe.sh 2>/dev/null)"; then
   export LESS='-R'
-  export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
+  export LESSOPEN="| $lesspipe_path %s"
 else
   echo "You need: brew install source-highlight"
 fi
