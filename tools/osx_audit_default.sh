@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 readonly CONTROL_CENTER_PLIST="$HOME/Library/Preferences/ByHost/com.apple.controlcenter.plist"
 
 normalize_value() {
@@ -74,4 +76,5 @@ register_default() {
 printf 'Comparing current macOS defaults with osx/default.sh expectations\n'
 printf 'Host-specific plist: %s\n\n' "$CONTROL_CENTER_PLIST"
 
-source "${0%/*}/../osx/lib/default_settings.sh"
+# shellcheck source=./osx/lib/default_settings.sh
+source "$dir"/../osx/lib/default_settings.sh

@@ -2,7 +2,7 @@
 
 set -eu
 
-readonly CONTROL_CENTER_PLIST="$HOME/Library/Preferences/ByHost/com.apple.controlcenter.plist"
+dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 register_default() {
 	local _label="$1"
@@ -17,7 +17,8 @@ register_default() {
 	)
 }
 
-source "${0%/*}/lib/default_settings.sh"
+# shellcheck source=./osx/lib/default_settings.sh
+source "$dir"/lib/default_settings.sh
 
 ##
 #  Reload

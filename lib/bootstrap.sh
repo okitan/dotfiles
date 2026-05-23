@@ -7,6 +7,8 @@ bootstrap_setup_error_trap() {
     error_prefix=$'\033[1;31m[bootstrap]\033[0m'
   fi
 
+  # shellcheck disable=SC2329
+  # Invoked indirectly via trap.
   bootstrap_on_error() {
     local exit_code=$?
     local line_no=${BASH_LINENO[0]}
